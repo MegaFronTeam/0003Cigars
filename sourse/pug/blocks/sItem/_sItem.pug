@@ -1,0 +1,57 @@
+mixin sItem(data)
+	// start sItem
+	+b.SECTION.sItem.section#sItem&attributes(attributes)
+		.container
+			a(href='catalog.html')
+				+icon('arrow-back')
+			+b.item
+				+e.title
+					.row
+						.brand ARTURO FUENTE
+						.country Доминиканcкая Республика
+					h2 Arturo Fuente Opus X 20th Anniversary Believe
+			.row
+				.col-md-7
+				.col-md-5
+					+e.P.descr Сигара, посвященная 20-летию знаменитых доминиканских &laquo;пурос&raquo; и&nbsp;вере создателей в&nbsp;свою мечту (именно так переводится название &laquo;Believe&raquo;). Фигурная витола среднего размера будет украшением любого торжественного обеда, она полна развивающимися оттенками кожи, которые сопровождают тона выпечки, корицы, оттенки кедра и&nbsp;перечные тона. Великолепное сливочно-кожистое послевкусие 
+						a подробнее...
+					+e.DL.properties
+						dt Крепость: 
+						dd
+						dt Размер сигары:
+						dd 146 мм × 52 RG:
+						dt Диаметр:
+						dd 21 мм
+						dt Время курения:
+						dd ~75 мин
+						dd Скрутка:
+						dt Ручная
+						dd Начинка:
+						dt Доминиканская респ
+						dd Связующий лист:
+						dt Доминиканская респ.
+						dd Покровный лист:
+						dt Доминиканская респ.
+						dd Формат:
+						dr Robusto
+					+e.to-cart
+						.form-check.form-check-inline
+							input(type="radio",id="inlineRadio1",value="retail", name="amount").form-check-input
+							label(for="inlineRadio1").form-check-label 1 400 руб.
+								span Поштучно, 1шт.
+						.form-check.form-check-inline
+							input(type="radio",id="inlineRadio1",value="wholesale", name="amount").form-check-input
+							label(for="inlineRadio1").form-check-label 141 400 руб.
+								span Коробка, 20шт.
+						.row
+							.col.counter
+								button 
+								span 2
+								button
+							.col.price 282 400 руб
+							.col
+								button
+									+icon('to-cart')
+
+			.row
+	// end sItem

@@ -1,0 +1,71 @@
+mixin catalogItem(img)
+	+b.catalog-item
+		a(href='#')
+			+e.img-wrap
+				+img(`img/catalog-img-${img}.jpg`).res-i
+			+e.caption
+				+e.brand ARTURO FUENTE
+				+e.title.h4 Opus X Robusto
+				+e.country Доминиканcкая Республика
+				+e.strength
+					span Крепость:
+					ul
+						+e.LI.rating
+						+e.LI.rating
+						+e.LI.rating
+						+e.LI.rating--empty
+						+e.LI.rating--empty
+		+e.to-buy
+			+e.price.h4 1 400 руб
+			+e.BUTTON
+				+icon('cart')
+
+
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title
+				h2.h1 Каталог
+			+b.display-wrap.row
+				+e.filter.col
+					+e.title Фильтр:
+					select.form-select(aria-label="Выберете страну")
+						option(selected) Страна
+						option(value="Другая страна")
+						option(value="Другая страна")
+						option(value="Другая страна")
+					select.form-select(aria-label="Выберете бренд")
+						option(selected) Бренд
+						option(value="Другой бренд")
+						option(value="Другой бренд")
+						option(value="Другой бренд")
+				+e.sorter.col-auto
+					+e.title Сортировать:
+					select.form-select(aria-label="Сортировать")
+						option(selected) Сначала дорогие
+						option(value="Потому дешевые")
+					
+			.row
+				.col-6.col-lg-4
+					+catalogItem('1')
+				.col-6.col-lg-4
+					+catalogItem('2')
+				.col-6.col-lg-4
+					+catalogItem('3')
+				.col-6.col-lg-4
+					+catalogItem('4')
+				.col-6.col-lg-4
+					+catalogItem('5')
+				.col-6.col-lg-4
+					+catalogItem('6')
+				.col-6.col-lg-4
+					+catalogItem('7')
+				.col-6.col-lg-4
+					+catalogItem('8')
+				.col-6.col-lg-4
+					+catalogItem('9')
+			+pugin
+
+
+	// end sCatalog
