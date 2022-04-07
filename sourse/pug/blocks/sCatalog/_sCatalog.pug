@@ -1,6 +1,6 @@
 mixin catalogItem(img)
 	+b.catalog-item
-		a(href='#')
+		+e.body(href='#')
 			+e.img-wrap
 				+img(`img/catalog-img-${img}.jpg`).res-i
 			+e.caption
@@ -15,7 +15,7 @@ mixin catalogItem(img)
 						+e.LI.rating
 						+e.LI.rating--empty
 						+e.LI.rating--empty
-		+e.to-buy
+		+e.footer
 			+e.price.h4 1 400 руб
 			+e.BUTTON
 				+icon('cart')

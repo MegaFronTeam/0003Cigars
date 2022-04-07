@@ -51,7 +51,7 @@
 	border-radius: 40px;
 	overflow: hidden;
 	filter: drop-shadow(0px 26px 44px #170704);
-	a {
+	&__body {
     text-align: center;
     padding: rem(40) rem(40) rem(27);
     display: flex;
@@ -112,7 +112,7 @@
 	&__rating {
 		@include rating;
 	}
-	&__to-buy {
+	&__footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -121,10 +121,6 @@
 		button {
 			@include buy-btn;
 		}
-		// .icon {
-		// 	font-size: 32px;
-		// 	fill:$white;
-		// }
 	}
 	&__price {
 		font-family: $headers-font;
