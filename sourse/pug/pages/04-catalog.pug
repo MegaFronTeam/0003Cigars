@@ -19,12 +19,13 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= index.head.title
-	title= "Каталог"
+	- let  title= 'Каталог'
+	title= title
 block pagecontent
 	//- +mob-mnu()
 
 	+top-nav()
+	//- +page-head(title)
 	//- +headerBlock
 	+sCatalog()
 	+footer()
