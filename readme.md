@@ -1,3 +1,3 @@
-1. https://megafronteam.github.io/0003Cigars/
-1. https://megafronteam.github.io/0003Cigars/catalog.html
-1. https://megafronteam.github.io/0003Cigars/item.html
+<!-- 1. https://megafronteam.github.io/0003Cigars/public -->
+1. https://megafronteam.github.io/0003Cigars/public/catalog.html
+1. https://megafronteam.github.io/0003Cigars/public/item.html
