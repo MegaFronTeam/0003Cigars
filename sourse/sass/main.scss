@@ -81,10 +81,19 @@ $output-bourbon-deprecation-warnings: false;
 
 .pagination-wrapper ul {
 	@extend .pagination;
+	justify-content: center
 }
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	margin-right: 2px;
+	margin-left: 2px;
+	font-family: $headers-font;
+	font-size: rem(24);
+	text-align: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
 }
 
 .pagination-wrapper li {
