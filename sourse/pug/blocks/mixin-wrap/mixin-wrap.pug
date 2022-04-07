@@ -28,3 +28,21 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+	
+mixin logo()
+	+b.logo(href="/")
+		+img('img/logo.png')
+mixin addr()
+	address
+		p  г. Ташкент, Мирабадский р-н, Массив&nbsp;Айбек, 14&nbsp;(ул. Саида Барака)
+		a(href="tel:+998996569900") +998 99 656 9900
+
+
+mixin page-head(h1 , back)
+	+b.page-head
+		.container
+			if back
+				+e.link-back(href="#")
+					+icon("arrow-left") 
+			h1= h1 

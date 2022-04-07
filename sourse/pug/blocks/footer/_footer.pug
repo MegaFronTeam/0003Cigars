@@ -15,13 +15,11 @@ mixin footer()
 						+e.title.h4 Каталог
 						ul
 							+navItem('Сигары','Сигариллы (Mini, Clubs, Chicos)','Табаки трубочные')
-				+e.logo.col-auto.text-center
-					+img('img/logo.png')
+				.col-auto.text-center
+					+logo()
 				+e.contacts.col.text-end
-					address
-						p.h4 г. Ташкент, Мирабадский р-н, Массив Айбек, 14&nbsp;(ул. Саида Барака)
-						a.h3(href="tel:+998996569900") +998 99 656 9900
-					button Написать консультанту
+					+addr()
+					+e.btn(href="#") Написать консультанту
 					+e.docs
 						a(href='#') Политика кофниденциальности
 						a(href='#') Пользовательское соглашение

@@ -1,18 +1,123 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
+	padding-top: rem(19);
+	address{
+		margin: 0;
+		p
+		{
+			font-size: 12px;
+			opacity: 0.7;
+			max-width: 220px;
+			margin-bottom: rem(14);
+		}
+		a{
+			@extend .text-white;
+		}
 	}
 
-	@include media-breakpoint-up(lg) {
-		background-color: red;
+	&__btn{
+		@extend .btn;
+		&--lang{
+			
+		}
+	}
+	&__btn--lang{
+		border: 1px solid $primary;
+		border-radius: 2px;
+		width: rem(48px);
+		height: rem(48px);
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__row{
+		justify-content: flex-end;
+		--bs-gutter-x: 44px;
+	}
+	&__row-main{
+		align-items: center;
+	}
 
+	.logo{
+		img{
+			@include media-breakpoint-up(sm) {
+
+				max-width: 121px;
+			}
+			max-width: 70px;
+		}
+		
 	}
-	p{
-		@include ell();
+	&__col{
+			@include media-breakpoint-up(xl) {
+				margin-right: 0;
+			}
+			@include media-breakpoint-up(md){
+
+				margin-right:   #{rem(180)};
+			}
+			margin-right:   #{rem(48)};
 	}
+
+	&__hr{
+		border-top: 1px solid rgba($primary, .1);
+		margin-top: rem(18);
+	}
+	.container{
+		position: relative;
+		&::after{
+			content: '';
+			@include a-cent(x);
+			bottom: 0;
+			height: 1px;
+			background-color:  rgba($primary, .1);;
+			width: calc(100% - #{$grid-gutter-width});
+		}
+	}
+	&__btn--basket{
+		display: inline-flex;
+		align-items: center;
+		height: rem(48px);
+		@include media-breakpoint-up(md) {
+			
+			padding-left: 20px;
+		}
+		@include media-breakpoint-down(md) {
+			width: rem(48);
+		}
+		padding: rem(10);
+		position: relative;
+		span{
+			margin: 0 rem(19);
+			@extend .mono;
+		}
+	}
+	&__count{
+		@include media-breakpoint-down(md) {
+			position: absolute;
+			top: -10px;
+			right: -10px;	
+		}
+		@include media-breakpoint-up(md) {
+			width: rem(30);
+			height: rem(30);
+			font-size: rem(14);
+		}
+		font-size: rem(12);
+	width: rem(24);
+	height: rem(24);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		background: linear-gradient(91.82deg, #D3BA8B 7.36%, #DA7619 96.55%);
+		align-items: center;
+		font-weight: 500;
+		color: $dark;
+		// font-family: serif;
+	}
+
+
 
 	@include media-breakpoint-up(md) {}
 

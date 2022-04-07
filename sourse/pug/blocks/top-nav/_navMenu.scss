@@ -1,9 +1,9 @@
 .menu{
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(37px);
 		flex-wrap: wrap;
 	}
 
@@ -12,23 +12,31 @@
 	margin-bottom: 0;
 	max-width: 100%;
 	li{
-		
-		// margin-left: 0;
-		// margin-right: 0;
-		padding: 0;
+
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(20) 0;
+		font-size: rem(16px);
+		color: #fff;
+		border-bottom: 1px solid transparent;
+		&.active{
+			border-color: $primary;
+		}	
+		&:hover,
+		&.active{
+			
+			color: $primary;
+		}	
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
+	--h: 2px;
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 5);
 	&.on span {
 		--color: transparent;
 	}
@@ -75,7 +83,7 @@
 		transform-origin: 50% 50%;
 	} 
 }
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
 
 	
 
@@ -88,7 +96,7 @@
 		top: 0;
 		// left: 0;
 		right: 0;
-		background-color: $body-bg;
+		background-color: $dark;
 		&:not(.active){
 			transform: translate3d(120%, 0,0);
 			--opacity: 0;

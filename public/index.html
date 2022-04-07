@@ -20,27 +20,62 @@
 			</header>
 			<!-- end header-->
 			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
+			<div class="top-nav">
 				<div class="container">
-					<div class="row">
-						<div class="col order-lg-0 order-last">
-							<div class="menu-mobile menu-mobile--js">
-								<div class="menu-mobile__inner">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-									</div>
-									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-									</ul>
+					<div class="top-nav__row-main row">
+						<div class="top-nav__col col d-xl-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+							</div>
+						</div>
+						<div class="col d-none d-xl-block">
+							<address>
+								<p> г. Ташкент, Мирабадский р-н, Массив&nbsp;Айбек, 14&nbsp;(ул. Саида Барака)</p><a href="tel:+998996569900">+998 99 656 9900</a>
+							</address>
+						</div>
+						<div class="col-auto">
+							<a class="logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/>
+							</a>
+						</div>
+						<div class="col">
+							<div class="top-nav__row row">
+								<div class="col-auto d-none d-xl-block"><a class="btn btn-primary" href="#">Написать консультанту</a></div>
+								<div class="col-auto">
+									<a class="top-nav__btn top-nav__btn--lang" href="#"><img src="img/svg/lang.svg" alt=""/>
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						<div class="top-nav__hr col-12 d-none d-xl-block">
+						</div>
+						<div class="col-xl order-xl-0 order-last">
+							<div class="menu-mobile menu-mobile--js">
+								<div class="menu-mobile__inner">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+									</div>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a class="active" href="#" itemprop="url">Новости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Бренды</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Бутик</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Партнеры</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Обучение</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клуб</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сигарная карта </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+									</ul>
+									<div class="d-xl-none container">
+										<address>
+											<p> г. Ташкент, Мирабадский р-н, Массив&nbsp;Айбек, 14&nbsp;(ул. Саида Барака)</p><a href="tel:+998996569900">+998 99 656 9900</a>
+										</address><br/><br/><a class="btn btn-primary" href="#">Написать консультанту</a>
+									</div>
+								</div>
 							</div>
+						</div>
+						<div class="col-auto">
+							<a class="top-nav__btn top-nav__btn--basket btn-dark2" href="#"><img src="img/svg/basket.svg" alt=""/><span class="d-none d-md-inline">Корзина</span>
+								<div class="top-nav__count">99
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -75,13 +110,16 @@
 								</ul>
 							</div>
 						</div>
-						<div class="footer__logo col-auto text-center"><img src="img/logo.png" alt="" loading="lazy"/>
+						<div class="col-auto text-center">
+							<a class="logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/>
+							</a>
 						</div>
 						<div class="footer__contacts col text-end">
 							<address>
-								<p class="h4">г. Ташкент, Мирабадский р-н, Массив Айбек, 14&nbsp;(ул. Саида Барака)</p><a class="h3" href="tel:+998996569900">+998 99 656 9900</a>
+								<p> г. Ташкент, Мирабадский р-н, Массив&nbsp;Айбек, 14&nbsp;(ул. Саида Барака)</p><a href="tel:+998996569900">+998 99 656 9900</a>
 							</address>
-							<button>Написать консультанту</button>
+							<a class="footer__btn" href="#">Написать консультанту
+							</a>
 							<div class="footer__docs"><a href="#">Политика кофниденциальности</a><a href="#">Пользовательское соглашение</a>
 							</div>
 						</div>
@@ -89,7 +127,7 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
