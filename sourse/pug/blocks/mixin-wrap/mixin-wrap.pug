@@ -39,10 +39,16 @@ mixin addr()
 		a(href="tel:+998996569900") +998 99 656 9900
 
 
-mixin page-head(h1 , back)
+mixin page-head(h1 , back, descr, brand, country, article)
 	+b.page-head
 		.container
 			if back
 				+e.link-back(href="#")
-					+icon("arrow-left") 
+					+icon("arrow-back") 
+			if descr
+					+e.title
+						.row
+							+e(href="#").brand.col-auto= brand
+							+e.country.col-auto= country
+							+e.article.col.text-end= article
 			h1= h1 

@@ -1,16 +1,9 @@
 mixin sItem(data)
 	// start sItem
 	+b.SECTION.sItem.section#sItem&attributes(attributes)
+		+page-head('Arturo Fuente Opus X 20th Anniversary Believe' , 'back', 'descr', 'ARTURO FUENTE', 'Доминиканcкая Республика', 'Артикул: 45649896')
 		.container
-			a(href='catalog.html')
-				+icon('arrow-back').arrow-back
 			+b.item
-				+e.title
-					.row
-						+e(href="#").brand.col-auto ARTURO FUENTE
-						+e.country.col-auto Доминиканcкая Республика
-						+e.article.col.text-end Артикул: 45649896
-					h2.h1 Arturo Fuente Opus X 20th Anniversary Believe
 				.row.justify-content-between
 					.col-xl-6.col-xl-6
 						+e.images-wrap
