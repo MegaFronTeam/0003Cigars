@@ -110,17 +110,7 @@
 		}
 	}
 	&__rating {
-		display: inline-block;
-		width: 8px;
-		height: 8px;
-		background-color: $orange;
-		border-radius:50%;
-		&:not(:last-child) {
-			margin-right: 16px;
-		}
-		&--empty {
-			background-color: #c4c4c4;
-		}
+		@include rating;
 	}
 	&__to-buy {
 		display: flex;
@@ -129,16 +119,12 @@
 		padding-left: rem(40);
 		padding-right: rem(40);
 		button {
-			width: 66px;
-			height: 66px;
-			border-radius: 50%;
-			background-color: $brown;
-			border: none
+			@include buy-btn;
 		}
-		.icon {
-			font-size: 32px;
-			fill:$white;
-		}
+		// .icon {
+		// 	font-size: 32px;
+		// 	fill:$white;
+		// }
 	}
 	&__price {
 		font-family: $headers-font;

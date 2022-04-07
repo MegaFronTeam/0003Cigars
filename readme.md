@@ -1,4 +1,3 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. https://megafronteam.github.io/0003Cigars/
+1. https://megafronteam.github.io/0003Cigars/catalog.html
+1. https://megafronteam.github.io/0003Cigars/item.html

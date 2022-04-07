@@ -501,3 +501,32 @@ iframe {
 	font-size: 14px;
 }
 
+@mixin rating {
+	display: inline-block;
+		width: 8px;
+		height: 8px;
+		background-color: $orange;
+		border-radius:50%;
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+		&--empty {
+			background-color: #c4c4c4;
+		}
+}
+
+@mixin buy-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 66px;
+	height: 66px;
+	border-radius: 50%;
+	background-color: $brown;
+	border: none;
+	.icon {
+		font-size: 32px;
+		fill:$white;
+	}
+}
+
