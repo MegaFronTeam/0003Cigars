@@ -10,7 +10,10 @@
 		font-family: $headers-font;
 		font-size: rem(24);
 	}
-	.page-link:hover, .pagination-wrapper li .page-numbers:hover {
+	.page-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 48px;
 		height: 48px;
 		border-radius: 100%;
@@ -24,6 +27,26 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCatalog
+
+.category-wrap {
+	display: flex;
+	margin-bottom: 40px;
+	.form-select {
+		@extend .mono;
+		@extend .h3;
+		color: $white;
+		background-color: transparent;
+		width: auto;
+		margin-right: rem(64);
+		padding-right: 30px;
+		background-image: url('../img/svg/select-arrow.svg');
+		background-position: right 8px top 20px;
+		&--active {
+			color: $primary;
+			border-bottom: 1px solid $primary;
+		}
+	}
+}
 
 .display-wrap {
 	margin-bottom: 62px;
@@ -39,7 +62,24 @@
 		width: auto;
 		margin-right: 16px;
 		padding-right: 30px;
+		&--selected {
+			position: relative;
+			padding-left: 30px;
+			background-color: $brown;
+			color: $white;
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "sdfsdf";
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				color: $white;
+			}
+		}
 		option {
+			color: $body-bg;
 		}
 	}
 }

@@ -46,7 +46,6 @@
 		}
 	}
 	&__docs {
-		margin-top: auto;
 		a {
 			display: block;
 			font-size: 14px;
@@ -57,6 +56,15 @@
 		@extend .btn-main;
 		align-self: end;
 		margin-bottom: 28px;
+	}
+	&__ruvents {
+		margin-top: auto;
+		font-size: 12px;
+		img {
+			width: 64px;
+			height: 18px;
+			margin-left: 18px;
+		}
 	}
 
 // 
