@@ -543,6 +543,7 @@ iframe {
 }
 
 .page-head {
+	padding-top: rem(81.800);
 	.container {
 		// padding-left: 0;
 	}
@@ -559,8 +560,8 @@ iframe {
 	&__article {
 		color: $brown;
 	}
-	&--brands {
-		margin-top: rem(81.800);
-	}
+	// &--brands {
+	// 	margin-top: rem(81.800);
+	// }
 }
 
