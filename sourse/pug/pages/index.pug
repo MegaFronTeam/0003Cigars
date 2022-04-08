@@ -12,6 +12,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
+include ../blocks/sPlug/_sPlug.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -24,8 +25,8 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	+header()
-	+top-nav()
+	//- +header()
+	//- +top-nav()
 	//- +topLine
 	//- +headerBlock
 	//- +sCatalog()
@@ -41,8 +42,8 @@ block pagecontent
 		//- 		h2= item.title
 		//- 		p= item.text
 	//- +sContact()
-	
-	+footer()
+	+sPlug()
+	//- +footer()
       
 
 

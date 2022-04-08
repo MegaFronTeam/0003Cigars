@@ -43,16 +43,16 @@ mixin sItem(data)
 											+input('2')
 										//- .col.SPAN 2
 										button.col-4 +
-								+e.price.h3.col-5 282 400 руб
-								+e.to-buy.col-2
+								+e.price.h3.col-9.col-sm-5 282 400 руб
+								+e.to-buy.col-3.col-sm-2
 									button
 										+icon('cart')
 			+e.subtitle.h2 С&nbsp;этим товаром покупают
 			+e.more.row
-				.col-6.col-lg-4
+				.col-md-6.col-lg-4
 					+catalogItem('1')
-				.col-6.col-lg-4
+				.col-md-6.col-lg-4
 					+catalogItem('2')
-				.col-6.col-lg-4
+				.col-md-6.col-lg-4
 					+catalogItem('3')
 	// end sItem
