@@ -1,9 +1,37 @@
+mixin contact-item(data)
+	+b.contact-item.col-12.col-lg-4
+		+e.H2.title= data.name
+		+e(href=`tel:${data.tel.split(" ").join('')}`).tel= data.tel
+		+e.addr!= data.addr
+		+e.schedule!= data.schedule
+		+e.map-wrap
+			script(type="text/javascript" charset="utf-8" async src= `${data.src}`) 
+		+e.path(href="#") Карта проезда и парковки
+
+
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+page-head('Контакты')
+			+e.row.row
+				+contact-item({name: 'Культ Сигар Москва-Сити', 
+											tel: '+7 (495) 287-8187', 
+											addr: 'Москва, Пресненская&nbsp;наб., д.&nbsp;10', 
+											schedule: 'Пн-Пт, с&nbsp;10:00 до&nbsp;19:00', 
+											src: 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9690b9d0303530cd40a63129849f834412bae0171d3236ab43bf7bb6780405f0&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false'})
+				+contact-item({name: 'Культ Сигар Депозитарий', 
+											tel: '+7 (495) 768 77 00', 
+											addr: 'Москва, ул.&nbsp;Стасовой, д.&nbsp;4', 
+											schedule: 'Пн-Пт, с&nbsp;10:00 до&nbsp;19:00', 
+											src: 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A382298d1582560200b3448d188762832a8aaa3dd8fd9b2be26b9a1b6cd1ca820&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false'})
+				+contact-item({name: 'Культ Сигар Узбекистан', 
+											tel: '+998 99 6569900', 
+											addr: 'Ташкент, массив&nbsp;Айбек, д.&nbsp;14', 
+											schedule: 'Пн-Пт, с&nbsp;10:00 до&nbsp;19:00', 
+											src: 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A959b4cb18e89a0f6e86185696a1116f1e36e43aec6ea7a687b0810267f3d10e1&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false'})
+			p e-mail 
+				a(href="mailto:order@cigar-cult.ru") order@cigar-cult.ru
+			+soc()
+
 	// end sContact

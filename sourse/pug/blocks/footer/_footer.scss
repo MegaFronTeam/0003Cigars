@@ -24,10 +24,16 @@
 			@include media-breakpoint-down(lg) {
 				column-count: 2;
 			}
+			@include media-breakpoint-down(md) {
+				column-count: auto;
+			}
 		}
 		li {
 			&:not(:last-child) {
 				margin-bottom: rem(16);
+				@include media-breakpoint-down(md) {
+					margin-bottom: rem(10);
+				}
 			}
 		}
 		a {
@@ -45,6 +51,9 @@
 	&__contacts {
 		display: flex;
 		flex-direction: column;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
 	}
 	address {
 		p {
@@ -76,8 +85,11 @@
 	}
 	&__btn {
 		@extend .btn-main;
-		align-self: end;
 		margin-bottom: 28px;
+		align-self: start;
+		@include media-breakpoint-up(md) {
+			align-self: end;
+		}
 	}
 	&__ruvents {
 		margin-top: auto;

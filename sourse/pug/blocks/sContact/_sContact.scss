@@ -1,6 +1,18 @@
-
 	// start .sContact
 	.sContact {
+		padding-bottom: rem(123);
+		p {
+			margin-bottom: rem(32);
+		}
+		a[href^="mailto:"] {
+			display: inline-block;
+			margin-left: 28px;
+		}
+	
+		&__row {
+			--bs-gutter-x:  #{rem(84)};
+			--bs-gutter-y:  var(--bs-gutter-x);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -27,3 +39,42 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContact
+
+.contact-item {	
+	&__title {
+		@extend h3;
+		max-width: 220px;
+		margin-bottom: rem(32);
+		line-height: 98.9%;
+	}
+	&__tel {
+		display: block;
+		margin-bottom: 14px;
+		font-size: rem(24);
+		color: $white;
+	}
+	&__schedule {
+		margin-bottom: 24px;
+	}
+	&__map-wrap {
+		@include block(390, 258);
+		overflow: hidden;
+		// height: rem(268);
+		// width: 87%;
+
+		margin-bottom: 25px;
+		background-color: $white;
+		border-radius: 8px;
+		& > * {
+			position: absolute;
+			width: 100% !important;
+			height: 100% !important;
+			top:0;
+			left: 0;
+		}
+	}
+	&__path {
+		display: block;
+		margin-bottom: rem(56);
+	}
+}
