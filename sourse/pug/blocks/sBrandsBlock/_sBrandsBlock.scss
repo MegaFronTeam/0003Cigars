@@ -1,0 +1,62 @@
+// start .sBrandsBlock
+.sBrandsBlock {
+	--sPT: #{rem(3)};
+	--sPB: #{rem(167)};
+	// --sTPB: ;
+	&__row {
+		--bs-gutter-y: #{rem(30.5)};
+	}
+	&__text-wrap {
+		h2 {
+			margin-bottom: rem(28);
+		}
+		p {
+			line-height: 1.70em;
+			margin-bottom: rem(55.800);
+		}
+		picture {
+			text-align: right;
+		}
+		&--indent {
+			p {
+				margin-bottom: rem(73);
+			}
+		}
+	}
+	&__card-wrap {
+		margin-bottom: rem(72);
+		h3 {
+			font-family: 'Playfair Display';
+			letter-spacing: 0.02em;
+			margin-bottom: rem(52);
+		}
+		&--indent {
+			margin-bottom: rem(88.800);
+		}
+	}
+	&__card-item {
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		padding: rem(60) rem(33.778) rem(28.200) rem(33.778);
+		border-radius: rem(40);
+		picture {
+			margin-bottom: rem(28);
+			text-align: center;
+		}
+		h4 {
+			font-family: 'Playfair Display';
+			color: $dark;
+			font-weight: 700;
+			text-align: center;
+			line-height: 98.9%;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrandsBlock
