@@ -6,7 +6,7 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				+e.navs.col
+				+e.navs.col-12.col-lg
 					+b.footer-nav
 						+e.title.h4 Меню
 						ul
@@ -15,7 +15,7 @@ mixin footer()
 						+e.title.h4 Каталог
 						ul
 							+navItem('Сигары','Сигариллы (Mini, Clubs, Chicos)','Табаки трубочные')
-				.col-auto.text-center
+				.col-4.col-lg-auto.text-center
 					+logo()
 				+e.contacts.col.text-end
 					+addr()

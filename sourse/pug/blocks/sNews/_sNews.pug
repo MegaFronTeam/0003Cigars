@@ -1,0 +1,17 @@
+mixin newsItem(img, date, title, descr)
+	+b.news-item
+		+e.img-wrap
+			+img(`img/news-item-${img}.jpg`)
+		+e.date= date
+		+e.h2!= title
+		+e.descr!= descr
+
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+page-head('Новости')
+			.row
+				.col-3
+					+newsItem("1","12.06.2022","Майя Сельва&nbsp;&mdash; женщина в&nbsp;сигарном бизнесе", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+	// end sNews

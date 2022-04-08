@@ -35,13 +35,16 @@ mixin sItem(data)
 								input(type="radio",id="radio2",value="wholesale", name="amount").form-check-input
 								label(for="radio2").form-check-label.h4 141 400 руб.
 									span Коробка, 20шт.
-							.row.align-items-center
-								+e.counter.col-auto
-									button -
-									span 2
-									button +
-								+e.price.h3.col 282 400 руб
-								+e.to-buy.col-auto
+							.row.align-items-center.flex-wrap
+								+e.counter.col-5
+									.row.flex-nowrap.align-items-center
+										button.col-4 -
+										.col-4
+											+input('2')
+										//- .col.SPAN 2
+										button.col-4 +
+								+e.price.h3.col-5 282 400 руб
+								+e.to-buy.col-2
 									button
 										+icon('cart')
 			+e.subtitle.h2 С&nbsp;этим товаром покупают

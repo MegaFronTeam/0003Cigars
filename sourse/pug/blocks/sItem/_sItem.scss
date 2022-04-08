@@ -94,7 +94,9 @@
 	&__counter {
 		display: flex;
 		align-items: center;
+		justify-content: flex-start;
 		button {
+			display: inline-block;
 			width: rem(64);
 			height: rem(64);
 			font-size: 32px;
@@ -103,13 +105,32 @@
 			color: $white;
 			border:1px solid $brown;
 		}
-		span {
+		input {
+			display: inline-block;
+			text-align: center;
+			padding: 0;
+			border: none;
 			font-family: $headers-font;
 			font-size: rem(32);
-			margin: 0 rem(25);
 			color: $white;
+			background-color: transparent;
+			&::placeholder {
+				font-family: $headers-font;
+				font-size: rem(32);
+				color: $white;
+			}			
+		}
+		.form-control:focus {
+			background-color: transparent;
+			// border-color: #f5b09a;
+			box-shadow: none;
+			color: $white;
+			outline: 0;
 		}
 	}
+	// &__input-wrap {
+	// 	width: 33%;
+	// }
 	&__price {
 		font-family: $headers-font;
 		@include media-breakpoint-down(md) {

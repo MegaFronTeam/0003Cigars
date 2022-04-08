@@ -5,6 +5,7 @@
 		// --sTPB: ;
 	&__row-main {
 		--bs-gutter-y: #{rem(40)};
+		margin-bottom: rem(70);
 	}
 
 	@include media-breakpoint-up(xl) {}

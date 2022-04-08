@@ -139,14 +139,21 @@
 										<input class="form-check-input" type="radio" id="radio2" value="wholesale" name="amount"/>
 										<label class="form-check-label h4" for="radio2">141 400 руб.<span>Коробка, 20шт.</span></label>
 									</div>
-									<div class="row align-items-center">
-										<div class="item__counter col-auto">
-											<button>-</button><span>2</span>
-											<button>+</button>
+									<div class="row align-items-center flex-wrap">
+										<div class="item__counter col-5">
+											<div class="row flex-nowrap align-items-center">
+												<button class="col-4">-</button>
+												<div class="col-4">
+													<div class="item__input-wrap form-group"><input class="item__input form-control" name="text" type="text" placeholder="2"/>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<button class="col-4">+</button>
+											</div>
 										</div>
-										<div class="item__price h3 col">282 400 руб
+										<div class="item__price h3 col-5">282 400 руб
 										</div>
-										<div class="item__to-buy col-auto">
+										<div class="item__to-buy col-2">
 											<button>
 												<svg class="icon icon-cart ">
 													<use xlink:href="img/svg/sprite.svg#cart"></use>
@@ -285,7 +292,7 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
-						<div class="footer__navs col">
+						<div class="footer__navs col-12 col-lg">
 							<div class="footer-nav">
 								<div class="footer-nav__title h4">Меню
 								</div>
@@ -310,7 +317,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-auto text-center">
+						<div class="col-4 col-lg-auto text-center">
 							<a class="logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/>
 							</a>
 						</div>
