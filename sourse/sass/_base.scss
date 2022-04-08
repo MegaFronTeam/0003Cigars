@@ -9,6 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
+	// height: 15000px;
 	// opacity: 0.7;
 } 
 
@@ -543,7 +544,7 @@ iframe {
 
 .page-head {
 	.container {
-		padding-left: 0;
+		// padding-left: 0;
 	}
 	&__title {
 		font-size: 14px;
@@ -557,6 +558,9 @@ iframe {
 	&__country,
 	&__article {
 		color: $brown;
+	}
+	&--brands {
+		margin-top: rem(81.800);
 	}
 }
 

@@ -1,0 +1,48 @@
+mixin sBrandsBlock(data)
+	// start sBrandsBlock
+	+b.SECTION.sBrandsBlock.section#sBrandsBlock&attributes(attributes)
+		.container
+			+e.text-wrap
+				.row
+					.col-lg-7
+						h2 Сигары
+						p Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы девушка выучилась на&nbsp;инженера и&nbsp;завершила
+					.col-lg-5
+						+pic('cigars.png')
+			+e.card-wrap
+				h3 Кубинские сигары (Habanos S.A.)
+				+e.row.row
+					mixin cardWrap(title)
+						.col-sm-6.col-lg-3
+							+e.card-item
+								+pic('card-img.png')
+								h4!= title 
+					+cardWrap('Сигары<br>Cohiba')
+					+cardWrap('Сигары<br>Montecristo')
+					+cardWrap('Сигары<br>Partagas')
+					+cardWrap('Сигары<br>Romeo y&nbsp;Julietta')
+					+cardWrap('Сигары<br>Hoyo De&nbsp;Monterrey')
+					+cardWrap('Сигары<br>H.Upmann')
+					+cardWrap('Сигары<br>Quintero')
+			+e.card-wrap--indent
+				h3 Некубинские сигары 
+				+e.row.row
+					+cardWrap('Сигары<br>Cohiba')
+					+cardWrap('Сигары<br>Montecristo')
+					+cardWrap('Сигары<br>Partagas')
+					+cardWrap('Сигары<br>Romeo y&nbsp;Julietta')
+			+e.text-wrap--indent
+				.row
+					.col-lg-7
+						h2 Аксессуары
+						p Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы девушка выучилась на&nbsp;инженера и&nbsp;завершила
+					.col-lg-5
+						+pic('ashtray-img.png')
+				+e.row.row
+					+cardWrap('Сигары<br>Cohiba')
+					+cardWrap('Сигары<br>Montecristo')
+					+cardWrap('Сигары<br>Partagas')
+					+cardWrap('Сигары<br>Romeo y&nbsp;Julietta')
+					+cardWrap('Сигары<br>Hoyo De&nbsp;Monterrey')
+					+cardWrap('Сигары<br>H.Upmann')
+	// end sBrandsBlock

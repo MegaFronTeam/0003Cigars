@@ -40,7 +40,7 @@ mixin addr()
 
 
 mixin page-head(h1 , back, descr, brand, country, article)
-	+b.page-head
+	+b.page-head&attributes(attributes)
 		.container
 			if back
 				+e.link-back(href="#")
