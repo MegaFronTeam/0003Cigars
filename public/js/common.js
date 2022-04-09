@@ -370,6 +370,43 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
+	jQuery(document).ready(function($) {
+		
+  $('.hc-news-item').hcSticky({
+    stickTo: $('.hc-container'),
+		responsive: {
+			768: {
+				disable: true
+			}
+		}
+  });
+});
+
+let itemThumbsSlider = new Swiper(".item-thumbs-slider--js", {
+	spaceBetween: 10,
+	slidesPerView: 3,
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+
+let itemSwiper = new Swiper('.item-slider--js', {
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	thumbs: {
+		swiper:itemThumbsSlider,
+	},
+});
+
+let fluidSlider = new Swiper(".fluid-slider--js", {
+	spaceBetween: 32,
+	slidesPerView: 'auto',
+	loop: true,
+});
+
+
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
 // 	window.setTimeout(function () {

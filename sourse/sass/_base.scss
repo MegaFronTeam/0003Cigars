@@ -544,9 +544,6 @@ iframe {
 
 .page-head {
 	padding-top: rem(81.800);
-	.container {
-		// padding-left: 0;
-	}
 	&__title {
 		font-size: 14px;
 		margin-bottom: 27px;
@@ -560,14 +557,6 @@ iframe {
 	&__article {
 		color: $brown;
 	}
-	// &--brands {
-	// 	margin-top: rem(81.800);
-	// }
-	&--news {
-		h1 {
-			margin-bottom: 60px;
-		}
-	}
 	&__link-back {
 		stroke: currentColor;
 		color: $white;
@@ -575,6 +564,19 @@ iframe {
     display: inline-block;
 		.icon-arrow-back {
 			width: rem(92);
+		}
+	}
+	&--news {
+		h1 {
+			margin-bottom: 60px;
+		}
+	}
+	&--news-item {
+		.page-head__link-back {
+			margin-bottom: 21px;
+		}
+		h1 {
+			margin-bottom: 58px;
 		}
 	}
 }

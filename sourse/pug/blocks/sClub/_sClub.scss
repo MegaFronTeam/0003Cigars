@@ -1,0 +1,47 @@
+// start .sClub
+.sClub {
+		--sPT: 0;
+		// --sPB: ;
+		// --sTPB: ;
+	&__main-descr {
+		max-width: 670px;
+		margin-bottom: rem(25);
+		font-size: 32px;
+		line-height: 150%;
+		& + p {
+			max-width: 670px;
+			line-height: 150%;
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&__tips-row {
+		margin-bottom: rem(47);
+	}
+	.icon {
+		margin-right: rem(32);
+		font-size: rem(48);
+		color: $brown;
+	}
+	&__tips {
+		font-size: 16px;
+		line-height: 150%;
+		opacity: 0.8;
+	}
+
+	p {
+		max-width: 803px;
+		// line-height: 170%;
+	}
+
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sClub

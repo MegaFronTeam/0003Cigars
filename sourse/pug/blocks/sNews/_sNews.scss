@@ -24,10 +24,13 @@
 	height: 100%;
 	img {
 		width: 100%;
-		height: 266px;
+		// height: 266px;
 		border-radius: 40px;
 		object-fit: cover;
 		margin-bottom: 22px;
+		@include media-breakpoint-down(xl) {
+			border-radius:63px;
+		}
 	}
 	&__link {
 		color: $white;

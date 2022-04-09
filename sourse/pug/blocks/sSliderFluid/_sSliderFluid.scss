@@ -1,0 +1,33 @@
+// start .sSliderFluid
+.sSliderFluid {
+		// --sPT: #{rem(64)};
+		--sPB: #{rem(35)};
+		// --sTPB: ;
+	.fluid-slider {
+		padding-top: 55px;
+		padding-bottom: 30px;
+	}
+	.swiper-slide {
+		width: auto;
+		@include media-breakpoint-down(lg) {
+			// width: 70%;
+		}
+	}
+
+	.swiper-slide-active {
+		// transform: scale(1.2);
+	}
+
+	img {
+		border-radius: 40px;
+		display: inline-block;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSliderFluid

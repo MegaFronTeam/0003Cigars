@@ -1,16 +1,16 @@
 // start .sNewsItem
 .sNewsItem {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: 0;
+		--sPB: #{rem(107)};
 		// --sTPB: ;
 	p {
-		margin-bottom: 32px;
+		margin-bottom: 42px;
 		line-height: 170%;
 		max-width: 803px;
 	}
 	
-	img {
-		max-height: 448px;
+	&__img {
+		max-height: 598px;
 		width: auto;
 		margin-bottom: 54px;
 	}
@@ -18,16 +18,25 @@
 	blockquote {
 		max-width: 803px;
 		@extend h3;
-		padding: rem(25) 32% rem(25) 0;
+		padding: rem(20) 15% rem(35) 0;
 		margin-bottom: rem(48);
 		font-family: $headers-font;
+		line-height: 98.9%;
 		border-top: 1px solid $primary;
 		border-bottom: 1px solid $primary;
 	}
-
+	.hc-news-item {
+		padding-top: rem(290);
+		@include media-breakpoint-down(md) {
+			padding-top: 0;
+		}
+	}
 	.news-item {
-		width: 24.24%;
-		height: auto;
+		max-width: 100%;
+		// img {
+		// 	margin-bottom: rem(24);
+		// }
+	
 	}
 
 
