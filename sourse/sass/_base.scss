@@ -563,6 +563,11 @@ iframe {
 	// &--brands {
 	// 	margin-top: rem(81.800);
 	// }
+	&--news {
+		h1 {
+			margin-bottom: 60px;
+		}
+	}
 	&__link-back {
 		stroke: currentColor;
 		color: $white;

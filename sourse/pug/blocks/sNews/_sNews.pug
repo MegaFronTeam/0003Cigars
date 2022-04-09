@@ -1,16 +1,41 @@
 mixin newsItem(img, date, title, descr)
 	+b.news-item
-		+e.img-wrap
-			+img(`img/news-item-${img}.jpg`)
+		//- +e.img-wrap
+		+img(`img/news-item-${img}.jpg`)
 		+e.date= date
-		+e.h2!= title
-		+e.descr!= descr
+		+e.link(href="#")
+			+e.H2!= title
+			+e.descr!= descr
+		+e.shadow-wrap
 
 mixin sNews(data)
 	// start sNews
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
 		.container
-			.row
-				.col-3
+			+e.row.row
+				.col-12.col-md-6.col-lg-4.col-xl-3
 					+newsItem("1","12.06.2022","Майя Сельва&nbsp;&mdash; женщина в&nbsp;сигарном бизнесе", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("2","12.06.2022","Big Smoke Las Vegas Weekend", "Big Smoke Las Vegas Weekend переезжает в&nbsp;Resorts World&nbsp;&mdash; одно из&nbsp;новейших заведений, открывшихся на&nbsp;знаменитой Лас-Вегас-Стрип.")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("1","12.06.2022","Winston Churchill Limited Edition 2022", "Впервые в&nbsp;истории бренда линия Davidoff Winston Churchill появилась в&nbsp;формате Perfecto. Ограниченный выпуск начал поступать в&nbsp;сигарные магазины.")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("3","12.06.2022","Марк Твен об&nbsp;американских сигарах", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("1","12.06.2022","Майя Сельва&nbsp;&mdash; женщина в&nbsp;сигарном бизнесе", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("2","12.06.2022","Big Smoke Las Vegas Weekend", "Big Smoke Las Vegas Weekend переезжает в&nbsp;Resorts World&nbsp;&mdash; одно из&nbsp;новейших заведений, открывшихся на&nbsp;знаменитой Лас-Вегас-Стрип.")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("1","12.06.2022","Winston Churchill Limited Edition 2022", "Впервые в&nbsp;истории бренда линия Davidoff Winston Churchill появилась в&nbsp;формате Perfecto. Ограниченный выпуск начал поступать в&nbsp;сигарные магазины.")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("3","12.06.2022","Марк Твен об&nbsp;американских сигарах", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("1","12.06.2022","Майя Сельва&nbsp;&mdash; женщина в&nbsp;сигарном бизнесе", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("2","12.06.2022","Big Smoke Las Vegas Weekend", "Big Smoke Las Vegas Weekend переезжает в&nbsp;Resorts World&nbsp;&mdash; одно из&nbsp;новейших заведений, открывшихся на&nbsp;знаменитой Лас-Вегас-Стрип.")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("1","12.06.2022","Winston Churchill Limited Edition 2022", "Впервые в&nbsp;истории бренда линия Davidoff Winston Churchill появилась в&nbsp;формате Perfecto. Ограниченный выпуск начал поступать в&nbsp;сигарные магазины.")
+				.col-12.col-md-6.col-lg-4.col-xl-3
+					+newsItem("1","12.06.2022","Майя Сельва&nbsp;&mdash; женщина в&nbsp;сигарном бизнесе", "Майя Сельва родилась 9&nbsp;августа 1965 года в&nbsp;Гондурасе в&nbsp;семье француженки и&nbsp;гондурасца. Она выросла в&nbsp;Тегусигальпе, но&nbsp;в&nbsp;шестнадцать лет переехала во&nbsp;Францию учиться. После окончания средней школы")
+			+pugin
 	// end sNews

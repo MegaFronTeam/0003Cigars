@@ -1,8 +1,12 @@
 // start .sNews
 .sNews {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT: 0;
+		--sPB: #{rem(105)};
 		// --sTPB: ;
+	&__row {
+		--bs-gutter-y:  var(--bs-gutter-x);
+		margin-bottom: rem(76);
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -12,3 +16,49 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sNews
+.news-item {
+	position: relative;
+	background-color: #3E2824;
+	border-radius: 40px;
+	overflow: hidden;
+	height: 100%;
+	img {
+		width: 100%;
+		height: 266px;
+		border-radius: 40px;
+		object-fit: cover;
+		margin-bottom: 22px;
+	}
+	&__link {
+		color: $white;
+	}
+	&__date {
+		padding-left: rem(25);
+		padding-right: rem(25);
+		margin-bottom: 16px;
+		font-size: 12px;
+	}
+	h2 {
+		padding-left: rem(25);
+		padding-right: rem(25);
+		margin-bottom: 16px;
+		@extend .h4;
+		line-height: 98.9%;
+	}
+	&__descr {
+		padding-left: rem(25);
+		padding-right: rem(25);
+		font-size: 12px;
+		line-height: 150%;
+	}
+	&__shadow-wrap {
+		position: absolute;
+		width: 100%;
+		height: rem(77);
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(180deg, rgba(62, 40, 36, 0) 0%, #3E2824 67.76%);
+		border-radius: 40px;
+	}
+}

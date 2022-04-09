@@ -1,0 +1,41 @@
+// start .sNewsItem
+.sNewsItem {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	p {
+		margin-bottom: 32px;
+		line-height: 170%;
+		max-width: 803px;
+	}
+	
+	img {
+		max-height: 448px;
+		width: auto;
+		margin-bottom: 54px;
+	}
+	
+	blockquote {
+		max-width: 803px;
+		@extend h3;
+		padding: rem(25) 32% rem(25) 0;
+		margin-bottom: rem(48);
+		font-family: $headers-font;
+		border-top: 1px solid $primary;
+		border-bottom: 1px solid $primary;
+	}
+
+	.news-item {
+		width: 24.24%;
+		height: auto;
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNewsItem
