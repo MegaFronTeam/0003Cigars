@@ -4,8 +4,36 @@
 		// --sPB: ;
 		// --sTPB: ;
 	.plug-container {
-		padding-top: rem(100);
 		text-align: center
+	}
+	h3 {
+		font-family: $headers-font;
+		margin-bottom: rem(50);
+	}
+	&__slider-wrap {
+		text-align: center;
+	}
+	.sliderAutoWidth {
+		max-width: 890px;
+		margin-bottom: rem(50);
+	}
+	.swiper-slide {
+		height: 170px;
+		max-width: 200px;
+		margin-right: 30px;
+		filter: sepia(60%)
+	}
+	.social-list {
+		display: flex;
+		list-style-type: none;
+		align-items: center;
+		justify-content: center;		
+	}
+	.social-item:not(:last-child) {
+		margin-right: 10px;
+	}
+	.icon-telegram {
+		font-size: rem(29);
 	}
 	.logo {
 		display: block;

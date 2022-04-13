@@ -2,6 +2,40 @@ mixin sPlug(data)
 	// start sPlug
 	+b.SECTION.sPlug.section#sPlug&attributes(attributes)
 		.container.plug-container
+			h3 ЕДИНЫЙ ИМПОРТЕР СИГАР В&nbsp;УЗБЕКИСТАНЕ
+			//- .container.sliderAutoWidthWrap.d-none.d-md-block
+			+e.slider-wrap
+				+b.sliderAutoWidth--js.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+img('img/bossner.jpg')
+						.swiper-slide
+							+img('img/davidoff.jpg')
+						.swiper-slide
+							+img('img/Habanos.png')
+						.swiper-slide
+							+img('img/Siglo de Oro.png')
+			//- ul.logo-list.row
+			//- 	li.col.col-sm-6.col-lg-3
+			//- 		+img('img/bossner.jpg')
+			//- 	li.col.col-sm-6.col-lg-3
+			//- 		+img('img/davidoff.jpg')
+			//- 	li.col.col-sm-6.col-lg-3
+			//- 		+img('img/Habanos.png')
+			//- 	li.col.col-sm-6.col-lg-3
+			//- 		+img('img/Siglo de Oro.png')
 			+logo()
 			+addr()
+			p e-mail 
+				a(href="mailto: DIR@CIGARS.UZ") DIR@CIGARS.UZ
+			ul.social-list
+				li.social-item
+					a(href="https://www.facebook.com/CIGARS.UZ" target="_blank")
+						+icon('fb')
+				li.social-item
+					a(href="https://www.instagram.com/CIGARS.UZ" target="_blank")
+						+icon('instagram')
+				li.social-item
+					a(href="https://telegram.me/CIGARS_UZ" target="_blank")
+						+icon('telegram')
 	// end sPlug

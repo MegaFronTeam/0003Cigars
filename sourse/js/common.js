@@ -406,6 +406,11 @@ let fluidSlider = new Swiper(".fluid-slider--js", {
 	loop: true,
 });
 
+let plugSlider = new Swiper(".sliderAutoWidth--js", {
+	slidesPerView: 'auto',
+	// loop: true,
+});
+
 
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');
