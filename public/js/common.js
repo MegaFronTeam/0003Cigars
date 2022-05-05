@@ -400,10 +400,57 @@ let itemSwiper = new Swiper('.item-slider--js', {
 	},
 });
 
-let fluidSlider = new Swiper(".fluid-slider--js", {
-	spaceBetween: 32,
-	slidesPerView: 'auto',
+// let fluidSlider = new Swiper(".fluid-slider--js", {
+// 	spaceBetween: 32,
+// 	slidesPerView: 'auto',
+// 	loop: true,
+// });
+
+let opt = {
+	// slidesPerView: 1,
 	loop: true,
+	speed: 1400,
+	parallax: true,
+	// scrollbar: {
+	// 	el: '.swiper-scrollbar',
+	// 	draggable: true,
+	// },
+	lazy: {
+		loadPrevNext: true,
+		loadPrevNextAmount: 3
+	},
+
+}
+
+const NewsSwiper = new Swiper('.sSliderFluid__slider--js', {
+	...opt,
+	// navigation: {
+	// 	nextEl: ' .swiper-button-next',
+	// 	prevEl: ' .swiper-button-prev',
+	// }
+});
+
+const NewsSwiperMd = new Swiper('.sSliderFluid__slider--md-js', opt);
+
+// const NewsSwiperMd2 = new Swiper('.sNews__slider--md2-js', opt);
+
+NewsSwiper.controller.control = [NewsSwiperMd];
+NewsSwiperMd.controller.control = NewsSwiper;
+// NewsSwiperMd2.controller.control = NewsSwiper;
+
+
+
+var $hoverClass = $('.sSliderFluid__sliders');
+var $sl = $('.sSliderFluid__slider');
+$sl.on('mousedown touchstart', function (e) {
+	if (e.type === 'mousedown') {
+		$hoverClass.addClass('hovered');
+	}
+});
+$sl.on('mouseup touchend', function (e) {
+	if (e.type === 'mouseup') {
+		$hoverClass.removeClass('hovered');
+	}
 });
 
 let plugSlider = new Swiper(".sliderAutoWidth--js", {
