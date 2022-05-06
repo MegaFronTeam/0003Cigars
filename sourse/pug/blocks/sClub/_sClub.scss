@@ -35,8 +35,75 @@
 		// line-height: 170%;
 	}
 
-
-
+	h2 {
+		margin-bottom: rem(65);
+	}
+	h3 {
+		line-height: 1.50em;
+		margin-bottom: rem(69);
+	}
+	&--2 {
+		.sClub__row {
+			align-items: center;
+		}
+	}
+	&__col {
+		margin-left: auto;
+		img {
+			margin-bottom: rem(35);
+		}
+	}
+	&--3 {
+		position: relative;
+		& > img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			z-index: -1;
+			transform: translateX(-50%);
+		}
+		.sClub__col {
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(120);
+			}
+		}
+		figure {
+			font-size: rem(11);
+			padding-left: rem(28);
+			blockquote {
+				color: $brown;
+				font-style: italic;
+				line-height: 1.80em;
+				max-width: rem(291);
+				position: relative;
+				margin-bottom: rem(9);
+				&::before, &::after {
+					background-repeat: no-repeat;
+					width: 15px;
+					height: 12px;
+					display: block;
+					position: absolute;
+				}
+				&::before {
+					content: '';
+					background-image: url(../img/svg/Quotation-Mark.svg);
+					left: rem(-28);
+					top: 0;
+				}
+				&::after {
+					content: '';
+					background-image: url(../img/svg/Quotation-Mark-2.svg);
+					left: rem(170);
+					bottom: 0;
+				}
+			}
+			cite {
+				font-style: normal;
+				color: $white;
+				opacity: .5;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -1,0 +1,29 @@
+// start .sBrandsSlider
+.sBrandsSlider {
+	--sPT: #{rem(24.200)};
+	--sPB: #{rem(25)};
+	// --sTPB: ;
+	&__slider {
+		overflow: visible;
+	}
+	&__item {
+		@include mt;
+		max-width: rem(220);
+		color: #2A1E1C;
+		&:hover {
+			color: #C4C4C4;
+		}
+		g {
+			rect {
+				fill: currentColor;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBrandsSlider

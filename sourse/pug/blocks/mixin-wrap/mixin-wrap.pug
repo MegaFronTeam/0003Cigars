@@ -13,9 +13,9 @@ include components/ddgroup.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('arrow-left')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon('arrow-right')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -38,7 +38,6 @@ mixin addr()
 		p  г. Ташкент, Мирабадский р-н, Массив&nbsp;Айбек, 14&nbsp;(ул. Саида Барака)
 		a(href="tel:+998996569900") +998 99 656 9900
 
-
 mixin page-head(h1 , back, descr, brand, country, article)
 	+b.page-head&attributes(attributes)
 		.container
@@ -52,3 +51,8 @@ mixin page-head(h1 , back, descr, brand, country, article)
 							+e.country.col-auto= country
 							+e.article.col.text-end= article
 			h1!= h1 
+
+//- mixin sliderArrow(t)
+//- 	+b.more
+//- 		a(href="#")!= t
+//- 		+arrow()

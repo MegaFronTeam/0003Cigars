@@ -16,6 +16,13 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu()
+			+soc()
+				+item-sos('')
+					+icon('instagram')
+				+item-sos('')
+					+icon('telegram')
+				+item-sos('')
+					+icon('fb')
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -24,14 +31,17 @@ mixin top-nav()
 			+e.row-main.row
 				+e.col.col.d-xl-none
 					+menu-toggle()
-				.col.d-none.d-xl-block
-					+addr()
 				.col-auto
 					+logo()
+				.col-auto.d-none.d-xl-flex
+					+addr()
+				//- .col-auto
 				.col
 					+e.row.row
 						.col-auto.d-none.d-xl-block
-							a.btn(href="#").btn-primary Написать консультанту
+							+e.link.btn(href="#").btn-primary Он-лайн помощник
+						.col-auto.d-none.d-xl-block
+							+e.link.btn(href="#").btn-primary Написать консультанту
 						.col-auto
 							+e.btn--lang(href="#")
 								img(src="img/svg/lang.svg", alt="")
@@ -45,8 +55,18 @@ mixin top-nav()
 							.d-xl-none.container
 								+addr()
 								br
+								+soc()
+									+item-sos('')
+										+icon('instagram')
+									+item-sos('')
+										+icon('telegram')
+									+item-sos('')
+										+icon('fb')
 								br
 								a.btn(href="#").btn-primary Написать консультанту
+								br
+								br
+								a.btn(href="#").btn-primary Он-лайн помощник
 				.col-auto
 					+e.btn--basket(href="#").btn-dark2
 						img(src="img/svg/basket.svg", alt="")

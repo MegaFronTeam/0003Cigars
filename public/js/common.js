@@ -363,6 +363,70 @@ function eventHandler() {
 	});
 	// modal window
 
+	const headerBlockSwiper = new Swiper('.headerBlock__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 32,
+		loop: true,
+		breakpoints: {
+			575: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			}
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	const sBestSwiper = new Swiper('.sBest__slider--js', {
+		slidesPerView: 1,
+		spaceBetween: 32,
+		loop: true,
+		breakpoints: {
+			575: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			}
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+
+	const sBrandsSliderSwiper = new Swiper('.sBrandsSlider__slider--js', {
+		slidesPerView: 'auto',
+		freemode: true,
+		spaceBetween: 32,
+		loop: true,
+	});
+
+	const convertImages = (query, callback) => {
+		const images = document.querySelectorAll(query);
+	
+		images.forEach(image => {
+			fetch(image.src)
+			.then(res => res.text())
+			.then(data => {
+				const parser = new DOMParser();
+				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+	
+				if (image.id) svg.id = image.id;
+				if (image.className) svg.classList = image.classList;
+	
+				image.parentNode.replaceChild(svg, image);
+			})
+			.then(callback)
+			.catch(error => console.error(error))
+		});
+	};
+	convertImages(".sBrandsSlider__item img");
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
@@ -441,6 +505,29 @@ const NewsSwiperMd = new Swiper('.sSliderFluid__slider--md-js', {
 
 NewsSwiper.controller.control = [NewsSwiperMd];
 NewsSwiperMd.controller.control = NewsSwiper;
+// NewsSwiperMd2.controller.control = NewsSwiper;
+
+// --------------
+
+const NewsSwiper2 = new Swiper('.sSliderFluid__slider--js-2', {
+	...opt,
+	// navigation: {
+	// 	nextEl: ' .swiper-button-next',
+	// 	prevEl: ' .swiper-button-prev',
+	// }
+	loopedSlides: 6,
+});
+
+const NewsSwiperMd2 = new Swiper('.sSliderFluid__slider--md-js-2', {
+	...opt,
+	spaceBetween: 32,
+	loopedSlides: 6,
+});
+
+// const NewsSwiperMd2 = new Swiper('.sNews__slider--md2-js', opt);
+
+NewsSwiper2.controller.control = [NewsSwiperMd2];
+NewsSwiperMd2.controller.control = NewsSwiper2;
 // NewsSwiperMd2.controller.control = NewsSwiper;
 
 

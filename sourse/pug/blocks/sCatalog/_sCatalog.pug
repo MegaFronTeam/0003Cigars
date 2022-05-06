@@ -1,5 +1,5 @@
-mixin catalogItem(img)
-	+b.catalog-item
+mixin catalogItem(img, strength, price)
+	+b.catalog-item--2&attributes(attributes)
 		+e.body(href='#')
 			+e.img-wrap
 				+img(`img/catalog-img-${img}.jpg`).res-i
@@ -7,16 +7,17 @@ mixin catalogItem(img)
 				+e.brand ARTURO FUENTE
 				+e.title.h4 Opus X Robusto
 				+e.country Доминиканcкая Республика
-				+e.strength
-					span Крепость:
-					ul
-						+e.LI.rating
-						+e.LI.rating
-						+e.LI.rating
-						+e.LI.rating--empty
-						+e.LI.rating--empty
+				if strength
+					+e.strength
+						span Крепость:
+						ul
+							+e.LI.rating
+							+e.LI.rating
+							+e.LI.rating
+							+e.LI.rating--empty
+							+e.LI.rating--empty
 		+e.footer
-			+e.price.h4 1 400 руб
+			+e.price.h4!= price
 			+e.BUTTON
 				+icon('cart')
 
@@ -88,23 +89,23 @@ mixin sCatalog(data)
 					
 			+e.row-main.row
 				.col-md-6.col-lg-4
-					+catalogItem('1')
+					+catalogItem('1', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('2')
+					+catalogItem('2', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('3')
+					+catalogItem('3', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('4')
+					+catalogItem('4', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('5')
+					+catalogItem('5', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('6')
+					+catalogItem('6', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('7')
+					+catalogItem('7', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('8')
+					+catalogItem('8', 'true', '1 400 руб')
 				.col-md-6.col-lg-4
-					+catalogItem('9')
+					+catalogItem('9', 'true', '1 400 руб')
 			+pugin
 
 

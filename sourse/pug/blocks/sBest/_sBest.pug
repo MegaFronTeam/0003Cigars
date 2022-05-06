@@ -1,0 +1,22 @@
+mixin sBest(data)
+	// start sBest
+	+b.SECTION.sBest.section#sBest&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Лучшее в каталоге
+			+e.slider--js.swiper
+				+e.swiper-wrap.swiper-wrapper
+					+catalogItem('10', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '39 400 руб').swiper-slide
+					+catalogItem('10', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '39 400 руб').swiper-slide
+					+catalogItem('10', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '39 400 руб').swiper-slide
+					+catalogItem('10', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '39 400 руб').swiper-slide
+				//- +sliderArrow('Перейти в каталог →')
+				+e.more
+					a(href="#") Перейти в каталог →'
+					+arrow()
+	// end sBest

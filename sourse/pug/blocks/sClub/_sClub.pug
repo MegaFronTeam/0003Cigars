@@ -1,4 +1,4 @@
-mixin sClub(data)
+mixin sClub()
 	// start sClub
 	+b.SECTION.sClub.section#sClub&attributes(attributes)
 		.container
@@ -21,3 +21,36 @@ mixin sClub(data)
 			p Своим названием эти витолы обязаны коренным жителям Острова свободы&nbsp;&mdash; индейцам таино. Слово &laquo;коиба&raquo; на&nbsp;их&nbsp;языке означало пучки табачных листьев, и&nbsp;именно в&nbsp;процессе курения такой формы сигар их&nbsp;впервые встретил Колумб.
 			p Для производства современных Cohiba используются листья seco и&nbsp;ligero с&nbsp;лучших полей наиболее популярного региона по&nbsp;выращиванию табака&nbsp;&mdash; Vuelta Abajo. Впоследствии табачные листья подвергаются процессу тройной ферментации, который позволяет вывести большую часть смол и&nbsp;нитратов. Об&nbsp;этом свидетельствует мягкий и&nbsp;ненавязчивый вкус этих Habanos.
 	// end sClub
+
+mixin sClub3()
+	+b.SECTION.sClub--2.section#sClub&attributes(attributes)
+		.container
+			+e.row.row
+				.col-12.col-lg-8
+					h2 Клуб
+					h3 Закрытый сигарный клуб "Cigar Academy" был создан в Ташкенте в 2021 году. По состоянию на апрель 2022&nbsp;года он объединяет более 65 постоянных членов : бизнесменов,  государственных служащих, дипломатов, банкиров, врачей, отраслевых специалистов.  Всех нас объединяет любовь к сигаре и сигарной культуре!
+				.col-12.col-lg-4
+					+e.tips-row.row
+						.col-auto.d-flex.align-items-center
+							+icon('chatting')
+						+e.tips.col.col Наши опытные консультанты к&nbsp;Вашим услугам и&nbsp;всегда помогут Вам сделать правильный выбор
+					+e.tips-row.row
+						.col-auto.d-flex.align-items-center
+							+icon('scooter')
+						+e.tips.col Для постоянных клиентов мы&nbsp;организуем доставку сигар в&nbsp;офис или домой
+		+sSliderFluid()
+
+mixin sClub2()
+	+b.SECTION.sClub--3.section#sClub&attributes(attributes)
+		+img('img/sClub-bg-1.png')
+		.container
+			+e.row.row
+				.col-12.col-lg-7
+					h2 Бутик
+					h3 Бутик &laquo;Культ Сигар&raquo; открылся в&nbsp;Ташкенте в&nbsp;2021 году и&nbsp;стал центральным местом для погружения в&nbsp;мир сигар и&nbsp;сигарных аксессуаров
+				+e.col.col-12.col-lg-3
+					+img('img/sClub-img-1.png')
+					figure
+						blockquote Хорошая сигара — такая же дань законам<br>общества, как умение читать по-французски и&nbsp;поездка на скачки в Эскот.
+						cite Уинстон Черчилль
+		+sSliderFluid2()

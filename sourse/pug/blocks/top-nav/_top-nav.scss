@@ -2,16 +2,18 @@
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	padding-top: rem(19);
 	address{
-		margin: 0;
+		margin: 0 rem(24) 0 0;
 		p
 		{
 			font-size: 12px;
 			opacity: 0.7;
 			max-width: 220px;
 			margin-bottom: rem(14);
+			// line-height: 1.6;
 		}
 		a{
 			@extend .text-white;
+			font-size: rem(20);
 		}
 	}
 
@@ -40,6 +42,7 @@
 	}
 
 	.logo{
+		margin-right: rem(10);
 		img{
 			@include media-breakpoint-up(sm) {
 
@@ -62,7 +65,7 @@
 
 	&__hr{
 		border-top: 1px solid rgba($primary, .1);
-		margin-top: rem(18);
+		margin-top: rem(25.200);
 	}
 	.container{
 		position: relative;
@@ -117,8 +120,33 @@
 		// font-family: serif;
 	}
 
-
-
+	.soc {
+		--bs-gutter-x: 7px;
+		align-self: flex-start;
+		margin-top: rem(7);
+		&__item {
+			width: auto;
+			height: auto;
+			border: 0.5px solid $brown;
+			padding: rem(7);
+			border-radius: 50%;
+		}
+		.icon {
+			font-size: rem(10);
+			min-width: 10px;
+			@include media-breakpoint-down(xl) {
+				max-width: 16px;
+				font-size: rem(15);
+			}
+		}
+	}
+	&__link {
+		font-weight: 600;
+		padding: rem(10) rem(25);
+		@include media-breakpoint-up(xl) {
+			font-size: rem(19);
+		}
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}

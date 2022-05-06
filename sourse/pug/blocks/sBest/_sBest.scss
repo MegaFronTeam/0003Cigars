@@ -1,0 +1,46 @@
+// start .sBest
+.sBest {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	// &__slider {
+	// 	margin-bottom: rem(38.600);
+	// }
+	&__swiper-wrap {
+		margin-bottom: rem(38.600);
+	}
+	&__more {
+		display: flex;
+		align-items: center;
+		a {
+			margin-right: auto;
+			font-size: rem(14);
+		}
+		position: relative;
+		.swiper-button-hand {
+			position: static;
+			border: none;
+			background-color: transparent;
+			color: $brown;
+			width: auto;
+			height: auto;
+			&-prev {
+				margin-right: rem(45);
+			}
+			&:hover {
+				color: $white;
+			}
+			.icon {
+				font-size: rem(17.4);
+				stroke: currentColor;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBest

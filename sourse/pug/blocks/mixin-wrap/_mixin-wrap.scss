@@ -108,3 +108,31 @@
 		}
 	}
 }
+
+// .more {
+// 	display: flex;
+// 	align-items: center;
+// 	a {
+// 		margin-right: auto;
+// 		font-size: rem(14);
+// 	}
+// 	position: relative;
+// 	.swiper-button-hand {
+// 		position: static;
+// 		border: none;
+// 		background-color: transparent;
+// 		color: $brown;
+// 		width: auto;
+// 		height: auto;
+// 		&-prev {
+// 			margin-right: rem(45);
+// 		}
+// 		&:hover {
+// 			color: $white;
+// 		}
+// 		.icon {
+// 			font-size: rem(17.4);
+// 			stroke: currentColor;
+// 		}
+// 	}
+// }

@@ -1,18 +1,6 @@
 mixin sSliderFluid(data)
 	// start sSliderFluid
 	+b.SECTION.sSliderFluid.section#sSliderFluid&attributes(attributes)
-		//- .swiper.fluid-slider.fluid-slider--js
-		//- 	.swiper-wrapper
-		//- 		.swiper-slide
-		//- 				+img('img/club-slider-1.jpg')
-		//- 		.swiper-slide
-		//- 				+img('img/club-slider-2.jpg')
-		//- 		.swiper-slide
-		//- 				+img('img/club-slider-3.jpg')
-		//- 		.swiper-slide
-		//- 				+img('img/club-slider-4.jpg')
-		//- 		.swiper-slide
-		//- 				+img('img/club-slider-5.jpg')
 		.container
 			+e.sliders.row
 				mixin wrapper()
@@ -34,5 +22,31 @@ mixin sSliderFluid(data)
 							+e.slide--md.swiper-slide: +img('img/club-slider-4.jpg')
 							+e.slide--md.swiper-slide: +img('img/club-slider-5.jpg')
 							+e.slide--md.swiper-slide: +img('img/club-slider-1.jpg')
+
+
+mixin sSliderFluid2(data)
+	// start sSliderFluid
+	+b.SECTION.sSliderFluid.section#sSliderFluid&attributes(attributes)
+		.container
+			+e.sliders.row
+				mixin wrapper()
+					.swiper-wrapper
+						block
+				+e.col-lg.col
+					+e.slider--js-2.--lg.swiper
+						+wrapper()
+							+e.slide.swiper-slide: +img('img/club-slider-6.jpg')
+							+e.slide.swiper-slide: +img('img/club-slider-7.jpg')
+							+e.slide.swiper-slide: +img('img/club-slider-8.jpg')
+							+e.slide.swiper-slide: +img('img/club-slider-6.jpg')
+							+e.slide.swiper-slide: +img('img/club-slider-7.jpg')
+				+e.col-md.col-auto
+					+e.slider--md-js-2.--md.swiper
+						+wrapper()
+							+e.slide--md.swiper-slide: +img('img/club-slider-7.jpg')
+							+e.slide--md.swiper-slide: +img('img/club-slider-8.jpg')
+							+e.slide--md.swiper-slide: +img('img/club-slider-6.jpg')
+							+e.slide--md.swiper-slide: +img('img/club-slider-7.jpg')
+							+e.slide--md.swiper-slide: +img('img/club-slider-6.jpg')
 
 	// end sSliderFluid

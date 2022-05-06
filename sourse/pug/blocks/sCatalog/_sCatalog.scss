@@ -169,4 +169,40 @@
 		font-family: $headers-font;
 		color: $dark;
 	}
+	&--2 {
+		@include mt;
+		background-color: #3E2824;
+		height: auto;
+		.catalog-item {
+			&__brand {
+				@include mt;
+				color: $white;
+				opacity: 0.5;
+				&:after {
+					background-color: rgba($color: #EB6034, $alpha: .2);
+				}
+			}
+			&__title, &__country, &__price {
+				@include mt;
+				color: $white;
+			}
+		}
+		&:hover {
+			background-color: $white;
+			.catalog-item {
+				&__brand {
+					color: $dark;
+					&:after {
+						background-color: rgba($color: #181818, $alpha: .2);
+					}
+				}
+				&__title, &__price {
+					color: $dark;
+				}
+				&__country {
+					color: $brown;
+				}
+			}
+		}
+	}
 }
