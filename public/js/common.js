@@ -428,9 +428,14 @@ const NewsSwiper = new Swiper('.sSliderFluid__slider--js', {
 	// 	nextEl: ' .swiper-button-next',
 	// 	prevEl: ' .swiper-button-prev',
 	// }
+	loopedSlides: 6,
 });
 
-const NewsSwiperMd = new Swiper('.sSliderFluid__slider--md-js', opt);
+const NewsSwiperMd = new Swiper('.sSliderFluid__slider--md-js', {
+	...opt,
+	spaceBetween: 32,
+	loopedSlides: 6,
+});
 
 // const NewsSwiperMd2 = new Swiper('.sNews__slider--md2-js', opt);
 
