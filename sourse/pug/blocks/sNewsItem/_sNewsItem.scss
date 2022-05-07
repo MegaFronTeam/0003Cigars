@@ -11,6 +11,7 @@
 	
 	&__img {
 		max-height: 598px;
+		max-width: 100%;
 		width: auto;
 		margin-bottom: 54px;
 	}
@@ -32,11 +33,7 @@
 		}
 	}
 	.news-item {
-		max-width: 100%;
-		// img {
-		// 	margin-bottom: rem(24);
-		// }
-	
+		max-width: 100%;	
 	}
 
 

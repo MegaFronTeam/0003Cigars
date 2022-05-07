@@ -1,11 +1,11 @@
 // start .sCatalog
 .sCatalog {
-		// --sPT: ;
-		// --sPB: ;
+		--sPT:0 ;
+		--sPB: #{rem(133)};
 		// --sTPB: ;
 	&__row-main {
-		--bs-gutter-y: #{rem(40)};
-		margin-bottom: rem(70);
+		--bs-gutter-y: #{rem(30)};
+		margin-bottom: rem(93);
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -20,8 +20,8 @@
 .category-wrap {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 40px;
-	.form-select {
+	margin-bottom: 29px;
+	.form-select, sCatalog__input-wrap {
 		padding-left: 0;
 		@extend .mono;
 		@extend .h3;
@@ -30,7 +30,7 @@
 		background-color: transparent;
 		width: auto;
 		border-radius: 0;
-		margin-right: rem(64);
+		margin-right: rem(45);
 		padding-right: 30px;
 		background-image: url('../img/svg/select-arrow.svg');
 		background-position: right 8px top 20px;
@@ -42,11 +42,17 @@
 }
 
 .display-wrap {
-	margin-bottom: 62px;
+	justify-content: space-between;
+	margin-bottom: 50px;
 	&__filter,
 	&__sorter {
 		display: flex;
 		flex-wrap: wrap;
+	}
+	&__sorter {
+		@include media-breakpoint-up(xl) {
+			justify-content: flex-end;
+		}
 	}
 	&__form {
 		display: flex;
@@ -56,10 +62,16 @@
 		font-size: rem(16);
 		margin-right: rem(25);
 	}
+	&__select-wrap {
+		&:not(:last-child) {
+			.form-select {
+				margin-right: 14px;
+			}
+		}
+	}
 	.form-select {
 		width: auto;
-		margin-right: 16px;
-		padding-right: 30px;
+		padding-right: 18px;
 		margin-bottom: 10px;
 		&--selected {
 			position: relative;
@@ -94,7 +106,7 @@
 	overflow: hidden;
 	&__body {
     text-align: center;
-    padding: rem(40) var(--sp-x) rem(27);
+    padding: rem(40) var(--sp-x) rem(18);
     display: flex;
 		flex-direction: column;
 		flex-grow: 1;
@@ -104,7 +116,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: rem(28);
+		margin-bottom: rem(15);
 		min-height: 133px;
 		@include media-breakpoint-up(xl) {
 			min-height: 266px;
@@ -116,7 +128,7 @@
 	&__brand {
 		position: relative;
 		padding-bottom: 17px;
-		margin-bottom: 17px;
+		margin-bottom: 21px;
 		font-size: 14px;
 		color: rgba($dark, .5);
 		&::after {
@@ -152,6 +164,16 @@
 			list-style-type: none;
 		}
 	}
+	&__duration  {
+		font-size: 12px;
+		color: $brown;
+		span {
+			display: inline-block;
+			margin-left: 16px;
+			font-weight: 700;
+			font-size: 12px;
+		}
+	}
 	&__rating {
 		@include rating;
 	}
@@ -168,6 +190,8 @@
 	&__price {
 		font-family: $headers-font;
 		color: $dark;
+		font-weight: 700;
+		font-size: 24px;
 	}
 	&--2 {
 		@include mt;

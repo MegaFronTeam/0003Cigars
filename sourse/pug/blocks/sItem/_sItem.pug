@@ -4,7 +4,7 @@ mixin sItem(data)
 		.container
 			+b.item
 				.row.justify-content-between
-					.col-xl-6.col-xl-6
+					.col-xl-6
 						+e.images-wrap
 							.swiper.item-slider.item-slider--js
 								.swiper-wrapper
@@ -22,7 +22,7 @@ mixin sItem(data)
 										+img('img/item-thumbs-2.jpg')
 									.swiper-slide
 										+img('img/item-thumbs-3.jpg')
-					.col-xl-5.col-xl-6
+					.col-xl-5
 						+e.P.descr Сигара, посвященная 20-летию знаменитых доминиканских &laquo;пурос&raquo; и&nbsp;вере создателей в&nbsp;свою мечту (именно так переводится название &laquo;Believe&raquo;). Фигурная витола среднего размера будет украшением любого торжественного обеда, она полна развивающимися оттенками кожи, которые сопровождают тона выпечки, корицы, оттенки кедра и&nbsp;перечные тона. Великолепное сливочно-кожистое послевкусие 
 							a(href="#") подробнее...
 						+e.UL.properties
@@ -42,31 +42,28 @@ mixin sItem(data)
 							li <span>Формат:</span> Robusto
 						+e.to-cart
 							.form-check.form-check-inline
-								input(type="radio",id="radio1",value="retail", name="amount").form-check-input
+								input(type="radio",id="radio1",value="retail", name="amount" checked).form-check-input
 								label(for="radio1").form-check-label.h4 1 400 руб.
 									span Поштучно, 1шт.
 							.form-check.form-check-inline
 								input(type="radio",id="radio2",value="wholesale", name="amount").form-check-input
 								label(for="radio2").form-check-label.h4 141 400 руб.
 									span Коробка, 20шт.
-							.row.align-items-center.flex-wrap
-								+e.counter.col-5
-									.row.flex-nowrap.align-items-center
-										button.col-4 -
-										.col-4
-											+input('2')
-										//- .col.SPAN 2
-										button.col-4 +
-								+e.price.h3.col-9.col-sm-5 282 400 руб
-								+e.to-buy.col-3.col-sm-2
-									button
-										+icon('cart')
+							+addblock()
+							//- +e.counter
+							//- 		button
+							//- 		+input('2')
+							//- 		button.plus
+							+e.price.h3 282 400 руб
+							+e.to-buy
+								button
+									+icon('cart')
 			+e.subtitle.h2 С&nbsp;этим товаром покупают
 			+e.more.row
 				.col-md-6.col-lg-4
-					+catalogItem('1')
+					+catalogItem('1','', 'true', '1400 руб.')
 				.col-md-6.col-lg-4
-					+catalogItem('2')
+					+catalogItem('2','', 'true', '1400 руб.')
 				.col-md-6.col-lg-4
-					+catalogItem('3')
+					+catalogItem('3','', 'true', '1400 руб.')
 	// end sItem

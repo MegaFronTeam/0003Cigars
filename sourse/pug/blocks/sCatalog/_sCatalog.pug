@@ -1,5 +1,5 @@
-mixin catalogItem(img, strength, price)
-	+b.catalog-item--2&attributes(attributes)
+mixin catalogItem(img, duration, strength, price)
+	+b.catalog-item&attributes(attributes)
 		+e.body(href='#')
 			+e.img-wrap
 				+img(`img/catalog-img-${img}.jpg`).res-i
@@ -7,6 +7,9 @@ mixin catalogItem(img, strength, price)
 				+e.brand ARTURO FUENTE
 				+e.title.h4 Opus X Robusto
 				+e.country Доминиканcкая Республика
+				if duration
+					+e.duration Время курения: 
+						span ~75 мин:
 				if strength
 					+e.strength
 						span Крепость:
@@ -48,7 +51,7 @@ mixin sCatalog(data)
 						option(value="Наборы 1") Наборы 1
 						option(value="Наборы 2") Наборы 2
 			+b.display-wrap.row
-				+e.filter.col
+				+e.filter.col-xl-9
 					+e.title Фильтр:
 					+e.form
 						+e.select-wrap
@@ -80,7 +83,11 @@ mixin sCatalog(data)
 								option(selected) Цена
 								option(value="от одной до другой") Цена1
 								option(value="от другой до другой") Цена2
-				+e.sorter.col-auto
+						+e.select-wrap
+							select.form-select(aria-label="Поштучно")
+								option(value="от одной до другой") Поштучно
+								option(value="от другой до другой") За упаковку
+				+e.sorter.col-xl-3
 					+e.title Сортировать:
 					+e.select-wrap
 						select.form-select(aria-label="Сортировать")
@@ -89,23 +96,23 @@ mixin sCatalog(data)
 					
 			+e.row-main.row
 				.col-md-6.col-lg-4
-					+catalogItem('1', 'true', '1 400 руб')
+					+catalogItem('1','true','true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('2', 'true', '1 400 руб')
+					+catalogItem('2','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('3', 'true', '1 400 руб')
+					+catalogItem('3','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('4', 'true', '1 400 руб')
+					+catalogItem('4','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('5', 'true', '1 400 руб')
+					+catalogItem('5','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('6', 'true', '1 400 руб')
+					+catalogItem('6','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('7', 'true', '1 400 руб')
+					+catalogItem('7','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('8', 'true', '1 400 руб')
+					+catalogItem('8','true', 'true', '1 400 сум')
 				.col-md-6.col-lg-4
-					+catalogItem('9', 'true', '1 400 руб')
+					+catalogItem('9','true', 'true', '1 400 сум')
 			+pugin
 
 

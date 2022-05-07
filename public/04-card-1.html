@@ -130,7 +130,7 @@
 				<div class="container">
 					<div class="item">
 						<div class="row justify-content-between">
-							<div class="col-xl-6 col-xl-6">
+							<div class="col-xl-6">
 								<div class="item__images-wrap">
 									<div class="swiper item-slider item-slider--js">
 										<div class="swiper-wrapper">
@@ -154,7 +154,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-5 col-xl-6">
+							<div class="col-xl-5">
 								<p class="item__descr">Сигара, посвященная 20-летию знаменитых доминиканских &laquo;пурос&raquo; и&nbsp;вере создателей в&nbsp;свою мечту (именно так переводится название &laquo;Believe&raquo;). Фигурная витола среднего размера будет украшением любого торжественного обеда, она полна развивающимися оттенками кожи, которые сопровождают тона выпечки, корицы, оттенки кедра и&nbsp;перечные тона. Великолепное сливочно-кожистое послевкусие <a href="#">подробнее...</a>
 								</p>
 								<ul class="item__properties">
@@ -176,34 +176,28 @@
 								</ul>
 								<div class="item__to-cart">
 									<div class="form-check form-check-inline">
-										<input class="form-check-input" type="radio" id="radio1" value="retail" name="amount"/>
+										<input class="form-check-input" type="radio" id="radio1" value="retail" name="amount" checked="checked"/>
 										<label class="form-check-label h4" for="radio1">1 400 руб.<span>Поштучно, 1шт.</span></label>
 									</div>
 									<div class="form-check form-check-inline">
 										<input class="form-check-input" type="radio" id="radio2" value="wholesale" name="amount"/>
 										<label class="form-check-label h4" for="radio2">141 400 руб.<span>Коробка, 20шт.</span></label>
 									</div>
-									<div class="row align-items-center flex-wrap">
-										<div class="item__counter col-5">
-											<div class="row flex-nowrap align-items-center">
-												<button class="col-4">-</button>
-												<div class="col-4">
-													<div class="item__input-wrap form-group"><input class="item__input form-control" name="text" type="text" placeholder="2"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<button class="col-4">+</button>
-											</div>
-										</div>
-										<div class="item__price h3 col-9 col-sm-5">282 400 руб
-										</div>
-										<div class="item__to-buy col-3 col-sm-2">
-											<button>
-												<svg class="icon icon-cart ">
-													<use xlink:href="img/svg/sprite.svg#cart"></use>
-												</svg>
-											</button>
-										</div>
+									<div class="addBlock">
+										<button class="addBlock__btn addBlock__btn--minus" type="button">
+										</button>
+										<input type="text" value="1"/>
+										<button class="addBlock__btn addBlock__btn--plus" type="button">
+										</button>
+									</div>
+									<div class="item__price h3">282 400 руб
+									</div>
+									<div class="item__to-buy">
+										<button>
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg>
+										</button>
 									</div>
 								</div>
 							</div>
@@ -213,7 +207,7 @@
 					</div>
 					<div class="sItem__more row">
 						<div class="col-md-6 col-lg-4">
-							<div class="catalog-item catalog-item--2">
+							<div class="catalog-item">
 								<a class="catalog-item__body" href="#">
 									<div class="catalog-item__img-wrap"><img class="res-i" src="img/catalog-img-1.jpg" alt="" loading="lazy"/>
 									</div>
@@ -224,10 +218,24 @@
 										</div>
 										<div class="catalog-item__country">Доминиканcкая Республика
 										</div>
+										<div class="catalog-item__strength"><span>Крепость:</span>
+											<ul><ul>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating catalog-item__rating--empty">
+												</li>
+												<li class="catalog-item__rating catalog-item__rating--empty">
+												</li>
+											</ul>
+										</div>
 									</div>
 								</a>
 								<div class="catalog-item__footer">
-									<div class="catalog-item__price h4">
+									<div class="catalog-item__price h4">1400 руб.
 									</div>
 									<button>
 										<svg class="icon icon-cart ">
@@ -238,7 +246,7 @@
 							</div>
 						</div>
 						<div class="col-md-6 col-lg-4">
-							<div class="catalog-item catalog-item--2">
+							<div class="catalog-item">
 								<a class="catalog-item__body" href="#">
 									<div class="catalog-item__img-wrap"><img class="res-i" src="img/catalog-img-2.jpg" alt="" loading="lazy"/>
 									</div>
@@ -249,10 +257,24 @@
 										</div>
 										<div class="catalog-item__country">Доминиканcкая Республика
 										</div>
+										<div class="catalog-item__strength"><span>Крепость:</span>
+											<ul><ul>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating catalog-item__rating--empty">
+												</li>
+												<li class="catalog-item__rating catalog-item__rating--empty">
+												</li>
+											</ul>
+										</div>
 									</div>
 								</a>
 								<div class="catalog-item__footer">
-									<div class="catalog-item__price h4">
+									<div class="catalog-item__price h4">1400 руб.
 									</div>
 									<button>
 										<svg class="icon icon-cart ">
@@ -263,7 +285,7 @@
 							</div>
 						</div>
 						<div class="col-md-6 col-lg-4">
-							<div class="catalog-item catalog-item--2">
+							<div class="catalog-item">
 								<a class="catalog-item__body" href="#">
 									<div class="catalog-item__img-wrap"><img class="res-i" src="img/catalog-img-3.jpg" alt="" loading="lazy"/>
 									</div>
@@ -274,10 +296,24 @@
 										</div>
 										<div class="catalog-item__country">Доминиканcкая Республика
 										</div>
+										<div class="catalog-item__strength"><span>Крепость:</span>
+											<ul><ul>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating">
+												</li>
+												<li class="catalog-item__rating catalog-item__rating--empty">
+												</li>
+												<li class="catalog-item__rating catalog-item__rating--empty">
+												</li>
+											</ul>
+										</div>
 									</div>
 								</a>
 								<div class="catalog-item__footer">
-									<div class="catalog-item__price h4">
+									<div class="catalog-item__price h4">1400 руб.
 									</div>
 									<button>
 										<svg class="icon icon-cart ">

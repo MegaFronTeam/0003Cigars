@@ -1,6 +1,6 @@
 // start .sPartners
 .sPartners {
-		// --sPT: ;
+		--sPT: #{rem(38)};
 		// --sPB: ;
 		// --sTPB: ;
 		h1 {
@@ -18,10 +18,13 @@
 	
 .partners-item {
 	--bs-gutter-y:  #{rem(30)};
-	margin-bottom: 88px;
+	margin-bottom: rem(92);
 	img {
 		max-width: 100%;
 		height: auto;
+		@include media-breakpoint-up(md) {
+			padding-top: rem(44);
+		}
 	}
 	&__name {
 		margin-bottom: rem(25);
@@ -29,6 +32,7 @@
 		font-family: $headers-font;
 	}
 	&__descr {
+		margin-bottom: rem(30);
 		line-height: 170%;
 	}
 }
