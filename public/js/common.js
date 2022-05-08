@@ -428,14 +428,21 @@ function eventHandler() {
 	};
 	convertImages(".sBrandsSlider__item img");
 };
+
+
+const sClubSwiper2 = new Swiper('.sClub__slider--js', {
+	slidesPerView: 'auto',
+});
+
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-	jQuery(document).ready(function($) {
-		
+jQuery(document).ready(function($) {
+	
   $('.hc-news-item').hcSticky({
     stickTo: $('.hc-container'),
 		responsive: {

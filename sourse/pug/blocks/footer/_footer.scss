@@ -97,8 +97,12 @@
 		@extend .btn-main;
 		margin-bottom: 28px;
 		align-self: start;
+		padding: rem(11) rem(33);
 		@include media-breakpoint-up(md) {
 			align-self: end;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(18);
 		}
 	}
 	&__ruvents {

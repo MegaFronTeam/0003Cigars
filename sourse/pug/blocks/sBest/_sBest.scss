@@ -1,8 +1,14 @@
 // start .sBest
 .sBest {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: #{rem(60)};
+	// --sPB: ;
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(132)};
+	}
+	.section-title {
+		margin-bottom: rem(55);
+	}
 	// &__slider {
 	// 	margin-bottom: rem(38.600);
 	// }
@@ -13,6 +19,7 @@
 		display: flex;
 		align-items: center;
 		a {
+			font-family: 'Montserrat Alternates', sans-serif;
 			margin-right: auto;
 			font-size: rem(14);
 		}
@@ -33,6 +40,43 @@
 			.icon {
 				font-size: rem(17.4);
 				stroke: currentColor;
+			}
+		}
+	}
+	.catalog-item {
+		@include mt;
+		background-color: #3E2824;
+		height: auto;
+		&__brand {
+			@include mt;
+			color: $white;
+			opacity: 0.5;
+			&:after {
+				background-color: rgba($color: #EB6034, $alpha: .2);
+			}
+		}
+		&__img-wrap {
+			margin-bottom: rem(60);
+		}
+		&__title, &__country, &__price {
+			@include mt;
+			color: $white;
+		}
+		&:hover {
+			background-color: $white;
+			.catalog-item {
+				&__brand {
+					color: $dark;
+					&:after {
+						background-color: rgba($color: #181818, $alpha: .2);
+					}
+				}
+				&__title, &__price {
+					color: $dark;
+				}
+				&__country {
+					color: $brown;
+				}
 			}
 		}
 	}

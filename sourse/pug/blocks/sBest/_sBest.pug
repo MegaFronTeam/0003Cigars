@@ -6,17 +6,17 @@ mixin sBest(data)
 				h2 Лучшее в каталоге
 			+e.slider--js.swiper
 				+e.swiper-wrap.swiper-wrapper
-					+catalogItem('10', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('11', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('10', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('11', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('11', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('10', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('11', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('10', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
-					+catalogItem('11', '', '39 400 руб').swiper-slide(class= "catalog-item--2")
+					+catalogItem('10', '', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '', '39 400 руб').swiper-slide
+					+catalogItem('10', '', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '', '39 400 руб').swiper-slide
+					+catalogItem('10', '', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '', '39 400 руб').swiper-slide
+					+catalogItem('10', '', '', '39 400 руб').swiper-slide
+					+catalogItem('11', '', '', '39 400 руб').swiper-slide
 				//- +sliderArrow('Перейти в каталог →')
 				+e.more
-					a(href="#") Перейти в каталог →'
+					a(href="#") Перейти в каталог →
 					+arrow()
 	// end sBest
