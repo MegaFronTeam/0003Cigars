@@ -1,6 +1,6 @@
 <!-- 1. https://megafronteam.github.io/0003Cigars/public -->
 1. <https://megafronteam.github.io/0003Cigars/public/>
-1. <https://megafronteam.github.io/0003Cigars/public/main/>
+1. <https://megafronteam.github.io/0003Cigars/public/main.html>
 1. <https://megafronteam.github.io/0003Cigars/public/02-news.html>
 1. <https://megafronteam.github.io/0003Cigars/public/02-news-item.html>
 1. <https://megafronteam.github.io/0003Cigars/public/03-brands.html>
