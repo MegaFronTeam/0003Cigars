@@ -3,6 +3,14 @@
 	--sPT: #{rem(36)};
 	--sPB: #{rem(97.200)};
 	// --sTPB: ;
+	position: relative;
+	& > img {
+		position: absolute;
+		top: rem(-130);
+		left: rem(30);
+		z-index: -1;
+		object-fit: cover;
+	}
 	&__wrap {
 		position: relative;
 		padding: rem(30);
