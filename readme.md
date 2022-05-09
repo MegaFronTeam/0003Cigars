@@ -9,4 +9,5 @@
 1. <https://megafronteam.github.io/0003Cigars/public/04-card-1.html>
 1. <https://megafronteam.github.io/0003Cigars/public/06-partners.html>
 1. <https://megafronteam.github.io/0003Cigars/public/07-club.html>
-1. <https://megafronteam.github.io/0003Cigars/public/08-contacts.html>
+1. <https://megafronteam.github.io/0003Cigars/public/09-cart.html>
+1. <https://megafronteam.github.io/0003Cigars/public/09-cart-2.html>
