@@ -217,25 +217,6 @@
 									<div class="tabs__content active">
 										<div class="sContactinfo__map">
 											<div class="sContactinfo__map-widget" id="map">
-												<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
-												<script>
-													function init () {
-														var center = [55.75380038320217,37.62071970898438];
-														var myMap = new ymaps.Map('map', {
-															center: center,
-															zoom: 10,
-															controls: ['zoomControl']
-														});
-														myPlacemark = new ymaps.Placemark([55.907228, 31.260503], {
-															// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-															balloonContentHeader: "Балун метки",
-															balloonContentBody: "Содержимое <em>балуна</em> метки",
-															balloonContentFooter: "Подвал",
-															hintContent: "Хинт метки"
-														});
-														myMap.geoObjects.add(myPlacemark);
-													}
-												</script>
 											</div>
 										</div>
 									</div>
@@ -424,6 +405,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 		<script src="js/common.js?v=0.0.1"></script>
 	</body>
 </html>
