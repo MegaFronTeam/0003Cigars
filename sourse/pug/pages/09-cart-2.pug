@@ -1,0 +1,37 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContactinfo/_sContactinfo.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+
+block variables
+	- let  mainPage= 'cart-page'
+	- let  bg= '09-cart-2.jpg'
+
+block title
+	- let  title= 'Оформление заказа'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+	+top-nav()
+	+page-head(title, 'true')
+	+sContactinfo
+	//- +headerBlock
+	//- +sContact()
+	+footer()
+      
+
+
+

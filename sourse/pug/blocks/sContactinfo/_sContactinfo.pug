@@ -1,0 +1,112 @@
+mixin sContactinfo(data)
+	// start sContactinfo
+	+b.SECTION.sContactinfo.section#sContactinfo&attributes(attributes)
+		.container
+			.row
+				.col-lg-7
+					+e.wrap
+						h3 Контактные данные
+						+form-wrap
+							+e.row.row 
+								.col-md-6
+									+input('Имя')
+								.col-md-6
+									+input('Фамилия')
+								.col-md-6
+									+input('E-mail', 'email')
+								.col-md-6
+									+input('Телефон', 'tel')
+								.col-md-12
+									+input('Комментарий к заказу', 'textarea')
+					+e.wrap
+						h3 Данные по доставке
+						.tabs.swiper
+							.tabs__caption.swiper-wrapper
+								.tabs__btn.swiper-slide.active Курьером
+								.tabs__btn.swiper-slide Самовывоз
+								.tabs__btn.swiper-slide Посылка
+							.tabs__content
+								+form-wrap
+									+e.row.row 
+										.col-md-6
+											+select('', 'Узбекистан', '2', '3')(disabled).form-select
+										.col-md-6
+												+select('', 'Город', '2', '3').form-select
+										.col-md-12.col-lg-6
+											+input('Улица')
+										.col-md-4.col-lg-2
+											+input('Дом', '')
+										.col-md-4.col-lg-2
+											+input('Корп.', '')
+										.col-md-4.col-lg-2
+											+input('Кв.', '')
+										.col-lg-12
+											+input('Уточнение по адресу доставки', 'textarea')
+							.tabs__content.active
+								+e.map
+									+e.map-widget#map
+										script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+										script.
+											
+											function init () {
+												var center = [55.75380038320217,37.62071970898438];
+												var myMap = new ymaps.Map('map', {
+													center: center,
+													zoom: 10,
+													controls: ['zoomControl']
+												});
+												myPlacemark = new ymaps.Placemark([55.907228, 31.260503], {
+													// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+													balloonContentHeader: "Балун метки",
+													balloonContentBody: "Содержимое <em>балуна</em> метки",
+													balloonContentFooter: "Подвал",
+													hintContent: "Хинт метки"
+												});
+												myMap.geoObjects.add(myPlacemark);
+											}
+							.tabs__content
+								+form-wrap
+									+e.row.row 
+										.col-md-6
+											+select('', 'Узбекистан', '2', '3').form-select
+										.col-md-6
+											+select('', 'Город', '2', '3').form-select
+										.col-md-12
+											+input('Улица')
+										.col-md-4.col-lg-2
+											+input('Дом', '')
+										.col-md-4.col-lg-2
+											+input('Корп.', '')
+										.col-md-4.col-lg-2
+											+input('Кв.', '')
+										.col-md-4.col-lg-2
+											+input('Индекс', '')
+										.col-lg-12
+											+input('Уточнение по адресу доставки', 'textarea')
+				+e.col-end.col-lg-4
+					+b.order-overview
+						table
+							thead
+								tr
+									td(colspan='3')
+										h3 Заказ
+							tbody
+								+e.list.TR
+									td San Lotano Bull Gordo
+									td.text-center x1
+									td 1 310 сум
+								+e.list.TR
+									td Romeo Y Julieta №2 A/T
+									td.text-center x1
+									td 2 310 сум
+								+e.order.TR
+									td(colspan='2') Доставка
+									td Курьером
+								+e.sum.TR
+									td(colspan='3') 
+										p Цена:
+										p 3 210 сум
+						+e.link(href="#").btn.btn-primary Оформить заказ
+						+e.confrim Нажимая на кнопку «Оформить» я даю согласие на #[a(href="#") обработку персональных данных.]
+						+e.text Доставка разрешена не для всех товаров из нашего каталога. Администратор проконсультирует Вас при подтверждении заказа. Заказчик подтверждает необходимость оплаты расходов за транспортировку по тарифам транспортного оператора
+	// end sContactinfo

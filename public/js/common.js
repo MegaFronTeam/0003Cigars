@@ -287,7 +287,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -434,6 +434,10 @@ const sClubSwiper2 = new Swiper('.sClub__slider--js', {
 	slidesPerView: 'auto',
 });
 
+
+const tabsSwiper = new Swiper('.tabs', {
+	slidesPerView: 'auto',
+});
 
 if (document.readyState !== 'loading') {
 	eventHandler();
