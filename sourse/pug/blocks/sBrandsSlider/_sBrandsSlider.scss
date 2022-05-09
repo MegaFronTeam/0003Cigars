@@ -7,18 +7,23 @@
 		overflow: visible;
 	}
 	&__item {
-		@include mt;
 		max-width: rem(220);
-		color: #2A1E1C;
+		// color: #2A1E1C;
 		text-align: center;
-		&:hover {
-			color: #C4C4C4;
-		}
-		g {
-			rect {
-				fill: currentColor;
+		align-self: center;
+		img {
+			@include mt;
+			opacity: .1;
+			&:hover {
+				opacity: 1;
+				// color: #C4C4C4;
 			}
 		}
+		// g {
+		// 	rect {
+		// 		fill: currentColor;
+		// 	}
+		// }
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
