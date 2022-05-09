@@ -2,7 +2,7 @@ mixin sContactinfo(data)
 	// start sContactinfo
 	+b.SECTION.sContactinfo.section#sContactinfo&attributes(attributes)
 		.container
-			.row
+			+e.main-row.row
 				.col-lg-7
 					+e.wrap
 						h3 Контактные данные
@@ -25,7 +25,7 @@ mixin sContactinfo(data)
 								.tabs__btn.swiper-slide.active Курьером
 								.tabs__btn.swiper-slide Самовывоз
 								.tabs__btn.swiper-slide Посылка
-							.tabs__content
+							.tabs__content.active
 								+form-wrap
 									+e.row.row 
 										.col-md-6
@@ -42,7 +42,7 @@ mixin sContactinfo(data)
 											+input('Кв.', '')
 										.col-lg-12
 											+input('Уточнение по адресу доставки', 'textarea')
-							.tabs__content.active
+							.tabs__content
 								+e.map
 									+e.map-widget#map
 							.tabs__content

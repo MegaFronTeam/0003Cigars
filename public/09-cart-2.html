@@ -115,7 +115,7 @@
 			<!-- start sContactinfo-->
 			<section class="sContactinfo section" id="sContactinfo">
 				<div class="container">
-					<div class="row">
+					<div class="sContactinfo__main-row row">
 						<div class="col-lg-7">
 							<div class="sContactinfo__wrap">
 								<h3>Контактные данные</h3>
@@ -169,7 +169,7 @@
 										<div class="tabs__btn swiper-slide">Самовывоз</div>
 										<div class="tabs__btn swiper-slide">Посылка</div>
 									</div>
-									<div class="tabs__content">
+									<div class="tabs__content active">
 										<div class="form-wrap">
 											<form>
 												<div class="form-wrap__row row"> 
@@ -240,7 +240,7 @@
 											</form>
 										</div>
 									</div>
-									<div class="tabs__content active">
+									<div class="tabs__content">
 										<div class="sContactinfo__map">
 											<div class="sContactinfo__map-widget" id="map">
 											</div>
@@ -451,7 +451,35 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"></script>
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
 		<script src="js/common.js?v=0.0.1"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+				var center = [41.31108110776953,69.28437276339038];
+				var myMap = new ymaps.Map('map', {
+					center: center,
+					zoom: 10,
+					controls: ['zoomControl']
+				});
+				myPlacemark = new ymaps.Placemark([41.31108110776953,69.28437276339038], {
+					balloonContentHeader: "Балун метки",
+					balloonContentBody: "Содержимое <em>балуна</em> метки",
+					balloonContentFooter: "Подвал",
+					hintContent: "Хинт метки"
+				});
+				myMap.geoObjects.add(myPlacemark);
+			
+				let  mapShow = true;
+				$('.tabs__btn:nth-child(2)').bind('click', function () {
+					myMap.container.fitToViewport();
+					console.log(mapShow)
+					if (mapShow == true) {
+						ymaps.ready(init);
+					}
+					mapShow = false;
+				});
+			};
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

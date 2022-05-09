@@ -32,6 +32,34 @@ block pagecontent
 	//- +sContact()
 	+footer()
       
+block map
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
 
+	script.
+		function init() {
+			var center = [41.31108110776953,69.28437276339038];
+			var myMap = new ymaps.Map('map', {
+				center: center,
+				zoom: 10,
+				controls: ['zoomControl']
+			});
+			myPlacemark = new ymaps.Placemark([41.31108110776953,69.28437276339038], {
+				balloonContentHeader: "Балун метки",
+				balloonContentBody: "Содержимое <em>балуна</em> метки",
+				balloonContentFooter: "Подвал",
+				hintContent: "Хинт метки"
+			});
+			myMap.geoObjects.add(myPlacemark);
 
-
+			let  mapShow = true;
+			$('.tabs__btn:nth-child(2)').bind('click', function () {
+				myMap.container.fitToViewport();
+				console.log(mapShow)
+				if (mapShow == true) {
+					ymaps.ready(init);
+				}
+				mapShow = false;
+			});
+		};
+	script.
+		ymaps.ready(init);
