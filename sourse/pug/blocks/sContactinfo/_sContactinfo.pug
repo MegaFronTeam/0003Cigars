@@ -29,9 +29,9 @@ mixin sContactinfo(data)
 								+form-wrap
 									+e.row.row 
 										.col-md-6
-											+select('', 'Узбекистан', '2', '3')(disabled).form-select
+											+input('Узбекистан', 'select')(disabled)
 										.col-md-6
-												+select('', 'Город', '2', '3').form-select
+												+input('Город', 'select')
 										.col-md-12.col-lg-6
 											+input('Улица')
 										.col-md-4.col-lg-2
@@ -49,9 +49,9 @@ mixin sContactinfo(data)
 								+form-wrap
 									+e.row.row 
 										.col-md-6
-											+select('', 'Узбекистан', '2', '3').form-select
+											+input('Узбекистан', 'select')
 										.col-md-6
-											+select('', 'Город', '2', '3').form-select
+											+input('Город', 'select')
 										.col-md-12
 											+input('Улица')
 										.col-md-4.col-lg-3

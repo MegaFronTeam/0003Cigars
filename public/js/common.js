@@ -439,30 +439,30 @@ const tabsSwiper = new Swiper('.tabs', {
 	slidesPerView: 'auto',
 });
 
-var center = [55.75380038320217,37.62071970898438];
-var myMap = new ymaps.Map('map', {
-	center: center,
-	zoom: 10,
-	controls: ['zoomControl']
-});
-myPlacemark = new ymaps.Placemark([55.907228, 31.260503], {
-	// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-	balloonContentHeader: "Балун метки",
-	balloonContentBody: "Содержимое <em>балуна</em> метки",
-	balloonContentFooter: "Подвал",
-	hintContent: "Хинт метки"
-});
-myMap.geoObjects.add(myPlacemark);
+// var center = [55.75380038320217,37.62071970898438];
+// var myMap = new ymaps.Map('map', {
+// 	center: center,
+// 	zoom: 10,
+// 	controls: ['zoomControl']
+// });
+// myPlacemark = new ymaps.Placemark([55.907228, 31.260503], {
+// 	// Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+// 	balloonContentHeader: "Балун метки",
+// 	balloonContentBody: "Содержимое <em>балуна</em> метки",
+// 	balloonContentFooter: "Подвал",
+// 	hintContent: "Хинт метки"
+// });
+// myMap.geoObjects.add(myPlacemark);
 
-let  mapShow = true;
-$('.tabs__btn:nth-child(2)').bind('click', function () {
-	//- myMap.container.fitToViewport();
-	//- console.log(mapShow)
-	if (mapShow == true) {
-		ymaps.ready(init);
-	}
-	mapShow = false;
-});
+// let  mapShow = true;
+// $('.tabs__btn:nth-child(2)').bind('click', function () {
+// 	//- myMap.container.fitToViewport();
+// 	//- console.log(mapShow)
+// 	if (mapShow == true) {
+// 		ymaps.ready(init);
+// 	}
+// 	mapShow = false;
+// });
 
 if (document.readyState !== 'loading') {
 	eventHandler();

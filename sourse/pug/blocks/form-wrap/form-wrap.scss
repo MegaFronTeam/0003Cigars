@@ -7,10 +7,10 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
-		//  &:not(textarea)::placeholder {
+		 &::placeholder {
 		// 		color: rgba(#05141F, .5);
-		// 		opacity: 0 !important	;
-		//  }
+				opacity: 0 !important	;
+		 }
  	}
  	&__btn{
  		cursor: pointer;
@@ -19,39 +19,37 @@
  		width: 100%;
  		display: block;
  	}
-// 	&__input-title{
-// 		position: absolute;
-// 		left: rem(23);
-// 		top: calc( var(--input-sp-top) + 8px);
-// 		font-size: 18px;
-// 		color: rgba($color: #fff, $alpha: .5); 
-// 		transform-origin: left ;
-// 		pointer-events: none;
-// 		@include mt;
-// 		max-width: 100%;
-// 	}
-// 	textarea  + &__input-title{
-// 		display: none;
-// 	}
-// 	&__input{
-		
-// 		&:-webkit-autofill ,
-// 		&:focus, 
-// 		&:not(:placeholder-shown){
-// 			&:not(textarea) {
-// 				// box-shadow:  0px 3px 0px  $primary;
-// 			}
-// 		}
-// 		&:-webkit-autofill ,
-// 		&:focus, 
-// 		&:not(:placeholder-shown), 
-// 		&.form-select  {
-// 			& ~ .form-wrap__input-title{
-// 				transform: scale(.86) translateY(calc( -1 * (var(--input-sp-top) + 12px))) translateX(0) ;
-// 				max-width: calc(100% );
-// 			}
-// 		}
-// 	}
+	&__input-title{
+		position: absolute;
+		// padding-left: $input-padding-x;
+		left: $input-padding-x;
+		top: $input-padding-y; 
+		color: rgba(#fff,  .5); 
+		transform-origin: left ;
+		pointer-events: none;
+		@include mt;
+		max-width: calc(100% - #{$input-padding-x});
+	}
+	&__input	{
+		padding-top: calc($input-padding-y * 1.5);
+		padding-bottom: calc($input-padding-y * .5);
+		&:-webkit-autofill ,
+		&:focus, 
+		&:not(:placeholder-shown){
+			&:not(textarea) {
+				// box-shadow:  0px 3px 0px  $primary;
+			}
+		}
+		&:-webkit-autofill ,
+		&:focus, 
+		&:not(:placeholder-shown), 
+		&.form-select  {
+			& ~ .form-wrap__input-title{
+				color: #846951;
+				transform: scale(.8) translateY(-90%) ; 
+			}
+		}
+	}
 }
 
 
