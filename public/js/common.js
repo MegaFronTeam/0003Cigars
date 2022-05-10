@@ -458,6 +458,7 @@ jQuery(document).ready(function($) {
 	
   $('.hc-news-item').hcSticky({
     stickTo: $('.hc-container'),
+		top: -280,
 		responsive: {
 			768: {
 				disable: true
