@@ -1,0 +1,43 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			table
+				tr
+					td
+						//- +pic('basket-img-1.jpg', "bg", 0)
+						+e.img-wrap
+							+img('img/item-main.jpg', "bg")
+					td 
+						p.h4 Arturo Fuente Opus X 20th Anniversary Believe
+						+e.text
+							p Артикул 121359985
+							p Поштучно, 1шт.
+					td
+						span.h4 1 400 сум
+						+addblock()
+					td
+						+e.hide(href='#')
+			table
+				tr
+					td
+						//- +pic('basket-img-1.jpg', "bg", 0)
+						+e.img-wrap
+							+img('img/item-main.jpg', "bg")
+					td 
+						p.h4 Arturo Fuente Opus X 20th Anniversary Believe
+						+e.text
+							p Артикул 121359985
+							p Поштучно, 1шт.
+					td
+						span.h4 1 400 сум
+						+addblock()
+					td
+						+e.hide(href='#')
+			+e.row.row
+				.col
+					h3 Итого: 3 210 сум
+				.col-auto
+					+e.outline-link(href="#").btn Купить в один клик
+					a(href="#").btn.btn-primary Оформить заказ
+	// end sCart

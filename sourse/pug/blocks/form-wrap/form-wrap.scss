@@ -1,12 +1,16 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
-			
+			position: relative;
 		}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 &::placeholder {
+		// 		color: rgba(#05141F, .5);
+				opacity: 0 !important	;
+		 }
  	}
  	&__btn{
  		cursor: pointer;
@@ -15,6 +19,37 @@
  		width: 100%;
  		display: block;
  	}
+	&__input-title{
+		position: absolute;
+		// padding-left: $input-padding-x;
+		left: $input-padding-x;
+		top: $input-padding-y; 
+		color: rgba(#fff,  .5); 
+		transform-origin: left ;
+		pointer-events: none;
+		@include mt;
+		max-width: calc(100% - #{$input-padding-x});
+	}
+	&__input	{
+		padding-top: calc($input-padding-y * 1.5);
+		padding-bottom: calc($input-padding-y * .5);
+		&:-webkit-autofill ,
+		&:focus, 
+		&:not(:placeholder-shown){
+			&:not(textarea) {
+				// box-shadow:  0px 3px 0px  $primary;
+			}
+		}
+		&:-webkit-autofill ,
+		&:focus, 
+		&:not(:placeholder-shown), 
+		&.form-select  {
+			& ~ .form-wrap__input-title{
+				color: #846951;
+				transform: scale(.8) translateY(-90%) ; 
+			}
+		}
+	}
 }
 
 
@@ -32,6 +67,39 @@
 .parsley-errors-list{
 	color: red;
 }
+
+// .form-control{
+// 	&:not(textarea){
+
+// 		border-left: none;
+// 		border-right: none;
+// 		border-top: none;
+// 	}
+// }
+// .form-group{
+// 	position: relative;
+// 	input{
+		
+// 	}
+// 	padding-top:  var(--input-sp-top);
+// 	margin-bottom: 24px;
+// }
+
+
+// .input-btn-wrap{
+// 	position: relative;	
+// }
+// .input-btn{
+// 	position: absolute;
+// 	right: 0;
+// 	top: 27px;
+// 	cursor: pointer;
+// 	&.show{
+// 		.path-line{
+// 			stroke:none !important;
+// 		}
+// 	}
+// }
 
 // 
 @include media-breakpoint-up(xl) {}

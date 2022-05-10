@@ -50,27 +50,31 @@
 	&__col {
 		margin-left: auto;
 		img {
-			margin-bottom: rem(35);
+			margin-bottom: rem(42.200);
 		}
 	}
 	&--3 {
+		--sPT: #{rem(35)};
+		--sPB: #{rem(50.400)};
 		position: relative;
 		& > img {
 			position: absolute;
-			top: 0;
-			left: 50%;
+			top: -9px;
+			left: 53.2%;
 			z-index: -1;
 			transform: translateX(-50%);
 		}
 		.sClub__col {
 			@include media-breakpoint-up(lg) {
-				margin-top: rem(120);
+				align-self: flex-end;
+    		margin-bottom: 27px;
 			}
 		}
 		figure {
 			font-size: rem(11);
 			padding-left: rem(28);
 			blockquote {
+				font-family: 'Montserrat Alternates' ,sans-serif;
 				color: $brown;
 				font-style: italic;
 				line-height: 1.80em;
@@ -93,14 +97,39 @@
 				&::after {
 					content: '';
 					background-image: url(../img/svg/Quotation-Mark-2.svg);
-					left: rem(170);
+					left: rem(195.200);
 					bottom: 0;
 				}
 			}
 			cite {
+				font-family: 'Montserrat Alternates' ,sans-serif;
 				font-style: normal;
 				color: $white;
 				opacity: .5;
+			}
+		}
+		.sClub {
+			&__wrap {
+				max-width: rem(231);
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: auto;
+				img {
+					margin-bottom: rem(34);
+					flex-grow: 1;
+				}
+				p {
+					font-size: rem(16);
+					margin-bottom: 0;
+					line-height: 1.50em;
+				}
+			}
+			&__slider {
+				padding-top: rem(21.800);
 			}
 		}
 	}

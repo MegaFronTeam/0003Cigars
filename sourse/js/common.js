@@ -287,7 +287,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -407,35 +407,46 @@ function eventHandler() {
 		loop: true,
 	});
 
-	const convertImages = (query, callback) => {
-		const images = document.querySelectorAll(query);
+	// const convertImages = (query, callback) => {
+	// 	const images = document.querySelectorAll(query);
 	
-		images.forEach(image => {
-			fetch(image.src)
-			.then(res => res.text())
-			.then(data => {
-				const parser = new DOMParser();
-				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+	// 	images.forEach(image => {
+	// 		fetch(image.src)
+	// 		.then(res => res.text())
+	// 		.then(data => {
+	// 			const parser = new DOMParser();
+	// 			const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
 	
-				if (image.id) svg.id = image.id;
-				if (image.className) svg.classList = image.classList;
+	// 			if (image.id) svg.id = image.id;
+	// 			if (image.className) svg.classList = image.classList;
 	
-				image.parentNode.replaceChild(svg, image);
-			})
-			.then(callback)
-			.catch(error => console.error(error))
-		});
-	};
-	convertImages(".sBrandsSlider__item img");
+	// 			image.parentNode.replaceChild(svg, image);
+	// 		})
+	// 		.then(callback)
+	// 		.catch(error => console.error(error))
+	// 	});
+	// };
+	// convertImages(".sBrandsSlider__item img");
 };
+
+
+const sClubSwiper2 = new Swiper('.sClub__slider--js', {
+	slidesPerView: 'auto',
+});
+
+
+const tabsSwiper = new Swiper('.tabs', {
+	slidesPerView: 'auto',
+});
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-	jQuery(document).ready(function($) {
-		
+jQuery(document).ready(function($) {
+	
   $('.hc-news-item').hcSticky({
     stickTo: $('.hc-container'),
 		top: -280,

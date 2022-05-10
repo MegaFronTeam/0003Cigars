@@ -97,13 +97,18 @@
 		@extend .btn-main;
 		margin-bottom: 28px;
 		align-self: start;
+		padding: rem(11) rem(33);
 		@include media-breakpoint-up(md) {
 			align-self: end;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(18);
 		}
 	}
 	&__ruvents {
 		margin-top: auto;
 		font-size: 12px;
+		color: $white;
 		img {
 			width: 64px;
 			height: 18px;

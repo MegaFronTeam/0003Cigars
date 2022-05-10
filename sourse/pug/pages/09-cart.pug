@@ -6,8 +6,9 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sCart/_sCart.pug
  
-include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
@@ -16,18 +17,19 @@ include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= null
+	- let  bg= '09-cart.jpg'
 
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Корзина'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 
 	+top-nav()
 	+page-head(title)
+	+sCart
 	//- +headerBlock
-	+sContact()
+	//- +sContact()
 	+footer()
       
 

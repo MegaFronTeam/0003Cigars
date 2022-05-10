@@ -5,6 +5,7 @@
 	// background-image: url(../img);
 	// background-color: #000000;
 	--sPT: #{rem(29.600)};
+	--sPB: #{rem(7)};
 	.bg-img {
 		position: absolute;
     top: 0;
@@ -94,12 +95,16 @@
 
 	&__swiper-wrap {
 		margin-bottom: rem(38.600);
+		padding: 30px;
+    margin-left: -30px;
+    margin-top: -30px;
 	}
 
 	&__more {
 		display: flex;
 		align-items: center;
 		a {
+			font-family: 'Montserrat Alternates', sans-serif;
 			margin-right: auto;
 			font-size: rem(14);
 		}

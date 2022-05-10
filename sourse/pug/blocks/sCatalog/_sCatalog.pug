@@ -13,12 +13,12 @@ mixin catalogItem(img, duration, strength, price)
 				if strength
 					+e.strength
 						span Крепость:
-						ul
-							+e.LI.rating
-							+e.LI.rating
-							+e.LI.rating
-							+e.LI.rating--empty
-							+e.LI.rating--empty
+						//- ul
+						+e.rating
+						+e.rating
+						+e.rating
+						+e.rating--empty
+						+e.rating--empty
 		+e.footer
 			+e.price.h4!= price
 			+e.BUTTON

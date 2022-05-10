@@ -106,8 +106,8 @@
 		&::before,
 		&::after{
 			content: '';
-			width: 10px;
-			height: 2px; 
+			width: 16px;
+			height: 1px; 
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;

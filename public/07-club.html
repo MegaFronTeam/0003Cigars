@@ -11,6 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&amp;display=swap" rel="stylesheet"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 	</head>
 	<body>
@@ -107,7 +108,7 @@
 				</div>
 			</div>
 			<!-- start sClub-->
-			<section class="sClub section" id="sClub">
+			<div class="sClub section" id="sClub">
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-8">
@@ -138,7 +139,7 @@
 					</div>
 				</div>
 				<!-- start sSliderFluid-->
-				<section class="sSliderFluid section" id="sSliderFluid">
+				<div class="sSliderFluid section" id="sSliderFluid">
 					<div class="container">
 						<div class="sSliderFluid__sliders row">
 							<div class="sSliderFluid__col-lg col">
@@ -175,13 +176,13 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 				<div class="container">
 					<p>Данная марка является самой известной и&nbsp;наиболее премиальной из&nbsp;всех кубинских сигар. Создана она была по&nbsp;специальному распоряжению Фиделя Кастро, который был ярым поклонником сигарной культуры и&nbsp;скуривал не&nbsp;менее трех витол в&nbsp;день. Поначалу производство велось на&nbsp;секретной фабрике El&nbsp;Laguito, которая впоследствии станет знаменита на&nbsp;весь мир. До&nbsp;сих пор она является полностью закрытым учреждением&nbsp;&mdash; туда не&nbsp;водят экскурсии и&nbsp;не&nbsp;пускают посторонних. Во&nbsp;времена Кастро сигары Cohiba могли покинуть Кубу только в&nbsp;качестве подарка дипломатам и&nbsp;главам государств, а&nbsp;на&nbsp;рынке появились лишь в&nbsp;80-х годах и&nbsp;в&nbsp;очень ограниченном количестве, сразу&nbsp;же завоевав множество титулов и&nbsp;наград экспертов.</p>
 					<p>Своим названием эти витолы обязаны коренным жителям Острова свободы&nbsp;&mdash; индейцам таино. Слово &laquo;коиба&raquo; на&nbsp;их&nbsp;языке означало пучки табачных листьев, и&nbsp;именно в&nbsp;процессе курения такой формы сигар их&nbsp;впервые встретил Колумб.</p>
 					<p>Для производства современных Cohiba используются листья seco и&nbsp;ligero с&nbsp;лучших полей наиболее популярного региона по&nbsp;выращиванию табака&nbsp;&mdash; Vuelta Abajo. Впоследствии табачные листья подвергаются процессу тройной ферментации, который позволяет вывести большую часть смол и&nbsp;нитратов. Об&nbsp;этом свидетельствует мягкий и&nbsp;ненавязчивый вкус этих Habanos.</p>
 				</div>
-			</section>
+			</div>
 			<!-- end sClub-->
 			<footer class="footer">
 				<div class="container">
@@ -223,8 +224,8 @@
 							</a>
 							<div class="footer__docs"><a href="#">Политика кофниденциальности</a><a href="#">Пользовательское соглашение</a>
 							</div>
-							<div class="footer__ruvents" href=#="href=#">Разработка сайта<img src="img/ruvents.png" alt="" loading="lazy"/>
-							</div>
+							<a class="footer__ruvents" href="#">Разработка сайта<img src="img/ruvents.png" alt="" loading="lazy"/>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -240,7 +241,9 @@
 							</div>
 							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/><span class="form-wrap__input-title">Ваше Имя</span> 
+							</label> 
 						</div>
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn" type="submit"> 

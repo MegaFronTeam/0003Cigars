@@ -1,0 +1,39 @@
+// start .sMoreInfo
+.sMoreInfo {
+	--sPT: #{rem(2.600)};
+	--sPB: #{rem(100)};
+	// --sTPB: ;
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(224)};
+	}
+	&__row {
+		--bs-gutter-y: #{rem(47)};
+	}
+	&__col {
+		img {
+			padding-top: rem(53.200);
+			@include media-breakpoint-down(lg) {
+				width: 100%;
+			}
+		}
+	}
+	&__col-img {
+		align-self: center;
+	}
+	h2 {
+		margin-bottom: rem(41);
+	}
+	p {
+		line-height: 1.50em;
+		opacity: .8;
+		font-size: rem(16);
+		margin-bottom: rem(56);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMoreInfo

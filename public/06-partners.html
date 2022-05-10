@@ -11,6 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&amp;display=swap" rel="stylesheet"/>
 		<link href="css/main.min.css?v=0.0.1" rel="stylesheet"/>
 	</head>
 	<body>
@@ -107,7 +108,7 @@
 				</div>
 			</div>
 			<!-- start sPartners-->
-			<section class="sPartners section" id="sPartners">
+			<div class="sPartners section" id="sPartners">
 				<div class="container">
 					<div class="partners-item row">
 						<div class="col-12 col-md-3 col-xl-2 text-center"><img src="img/partner-1.png" alt="" loading="lazy"/>
@@ -158,7 +159,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sPartners-->
 			<footer class="footer">
 				<div class="container">
@@ -200,8 +201,8 @@
 							</a>
 							<div class="footer__docs"><a href="#">Политика кофниденциальности</a><a href="#">Пользовательское соглашение</a>
 							</div>
-							<div class="footer__ruvents" href=#="href=#">Разработка сайта<img src="img/ruvents.png" alt="" loading="lazy"/>
-							</div>
+							<a class="footer__ruvents" href="#">Разработка сайта<img src="img/ruvents.png" alt="" loading="lazy"/>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -217,7 +218,9 @@
 							</div>
 							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/><span class="form-wrap__input-title">Ваше Имя</span> 
+							</label> 
 						</div>
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn" type="submit"> 
