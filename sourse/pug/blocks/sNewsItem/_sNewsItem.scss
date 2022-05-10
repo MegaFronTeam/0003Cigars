@@ -3,17 +3,19 @@
 		--sPT: 0;
 		--sPB: #{rem(107)};
 		// --sTPB: ;
-	p {
-		margin-bottom: 42px;
-		line-height: 170%;
-		max-width: 803px;
-	}
-	
-	&__img {
-		max-height: 598px;
-		max-width: 100%;
-		width: auto;
-		margin-bottom: 54px;
+	.col-left {
+		p {
+			margin-bottom: 42px;
+			line-height: 170%;
+			max-width: 803px;
+		}
+		
+		img {
+			max-height: 598px;
+			max-width: 100%;
+			width: auto;
+			margin-bottom: 54px;
+		}
 	}
 	
 	blockquote {

@@ -1,6 +1,6 @@
 mixin newsItem(img, date, title, descr)
 	+b.news-item
-		+e.img-wrap
+		+e.img-wrap(href="#")
 			+img(`img/news-item-${img}.jpg`)
 		+e.date= date
 		+e.link(href="#")

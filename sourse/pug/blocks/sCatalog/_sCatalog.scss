@@ -76,6 +76,7 @@
 		&--selected {
 			position: relative;
 			padding-left: 30px;
+			padding-right: 30px;
 			background-color: $brown;
 			color: $white;
 			&::before {

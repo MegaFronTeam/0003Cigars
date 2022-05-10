@@ -28,7 +28,11 @@
 		overflow: hidden;
 		margin-bottom: 22px;
 		@include media-breakpoint-down(xl) {
-			border-radius:63px;
+			// border-radius:63px;
+		}
+		&:before {
+			border-radius: 40px;
+			overflow:hidden;
 		}
 		img {
 			position: absolute;
