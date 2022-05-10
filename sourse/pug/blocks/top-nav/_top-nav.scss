@@ -138,6 +138,12 @@
 				max-width: 16px;
 				font-size: rem(15);
 			}
+			&-instagram {
+				font-size: rem(13);
+			}
+			&-fb {
+				font-size: rem(13);
+			}
 		}
 	}
 	&__link {
@@ -146,6 +152,14 @@
 		@include media-breakpoint-up(xl) {
 			font-size: rem(19);
 		}
+	}
+
+	&__col-soc {
+		@include media-breakpoint-up(xl) {
+			align-self: flex-start;
+    	margin-top: 15px;
+		}
+
 	}
 	@include media-breakpoint-up(md) {}
 

@@ -33,7 +33,14 @@ mixin top-nav()
 					+logo()
 				.col-auto.d-none.d-xl-flex
 					+addr()
-				//- .col-auto
+				+e.col-soc.col-auto.d-none.d-xl-block
+					+soc()
+						+item-sos()
+							+icon('instagram')
+						+item-sos()
+							+icon('telegram')
+						+item-sos()
+							+icon('fb')
 				.col
 					+e.row.row
 						.col-auto.d-none.d-xl-block
