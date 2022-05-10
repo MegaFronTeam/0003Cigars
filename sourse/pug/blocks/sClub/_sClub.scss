@@ -20,9 +20,11 @@
 		margin-bottom: rem(47);
 	}
 	.icon {
-		margin-right: rem(32);
 		font-size: rem(48);
 		color: $brown;
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(32);
+		}
 	}
 	&__tips {
 		font-size: 16px;
@@ -36,7 +38,10 @@
 	}
 
 	h2 {
-		margin-bottom: rem(65);
+		margin-bottom: rem(28);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(65);
+		}
 	}
 	h3 {
 		line-height: 1.50em;
@@ -130,6 +135,7 @@
 			}
 			&__slider {
 				padding-top: rem(21.800);
+				overflow: visible;
 			}
 		}
 	}

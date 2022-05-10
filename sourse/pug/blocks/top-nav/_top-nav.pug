@@ -29,8 +29,6 @@ mixin top-nav()
 	+b.top-nav
 		.container
 			+e.row-main.row
-				+e.col.col.d-xl-none
-					+menu-toggle()
 				.col-auto
 					+logo()
 				.col-auto.d-none.d-xl-flex
@@ -72,5 +70,7 @@ mixin top-nav()
 						img(src="img/svg/basket.svg", alt="")
 						span.d-none.d-md-inline Корзина
 						+e.count 99
+				+e.col.col-auto.d-xl-none
+					+menu-toggle()
 				
 	// end top-nav

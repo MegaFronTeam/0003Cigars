@@ -9,9 +9,9 @@
 	.section-title {
 		margin-bottom: rem(55);
 	}
-	// &__slider {
-	// 	margin-bottom: rem(38.600);
-	// }
+	&__slider {
+		overflow: visible;
+	}
 	&__swiper-wrap {
 		margin-bottom: rem(38.600);
 	}
@@ -47,6 +47,7 @@
 		@include mt;
 		background-color: #3E2824;
 		height: auto;
+		max-width: rem(448);
 		&__brand {
 			@include mt;
 			color: $white;
