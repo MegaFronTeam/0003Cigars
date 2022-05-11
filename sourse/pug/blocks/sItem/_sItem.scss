@@ -67,7 +67,6 @@
 	width: 302px;
 	box-sizing: border-box;
 	padding: 10px 0;
-	border: 2px solid transparent;
 	@include media-breakpoint-down(xl) {
 		bottom: 10px;
 		// width: 70%;
@@ -77,6 +76,7 @@
 		height: 26%;
 	}
 	.swiper-slide {
+		border: 2px solid transparent;
 		display: flex;
     align-items: center;
 		justify-content: center;
