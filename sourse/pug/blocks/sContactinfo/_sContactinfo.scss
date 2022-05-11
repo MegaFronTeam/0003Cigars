@@ -26,8 +26,12 @@
 	}
 	.form-wrap {
 		&__row {
-			--bs-gutter-x: #{rem(32)};
-			--bs-gutter-y: #{rem(28)};
+			--bs-gutter-x: #{rem(5)};
+			--bs-gutter-y: #{rem(20)};
+			@include media-breakpoint-up(sm) {
+				--bs-gutter-x: #{rem(32)};
+				--bs-gutter-y: #{rem(28)};
+			}
 		}
 		&__input-wrap {
 
