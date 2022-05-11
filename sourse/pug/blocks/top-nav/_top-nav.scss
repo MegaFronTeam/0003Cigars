@@ -76,6 +76,9 @@
 			height: 1px;
 			background-color:  rgba($primary, .1);;
 			width: calc(100% - #{$grid-gutter-width});
+			@include media-breakpoint-down(xl) {
+				bottom: -15px;
+			}
 		}
 	}
 	&__btn--basket{
