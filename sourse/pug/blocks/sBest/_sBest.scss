@@ -9,9 +9,11 @@
 	.section-title {
 		margin-bottom: rem(55);
 	}
-	// &__slider {
-	// 	margin-bottom: rem(38.600);
-	// }
+	&__slider {
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
+	}
 	&__swiper-wrap {
 		margin-bottom: rem(38.600);
 	}
@@ -47,6 +49,15 @@
 		@include mt;
 		background-color: #3E2824;
 		height: auto;
+		// max-width: rem(453);
+		// @include media-breakpoint-up(md) {
+		// 	max-width: rem(447);
+		// }
+		@include media-breakpoint-up(lg) {
+			max-width: rem(447);
+		}
+		&__body {
+		}
 		&__brand {
 			@include mt;
 			color: $white;

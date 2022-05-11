@@ -145,3 +145,11 @@
 // 		}
 // 	}
 // }
+
+.page-head {
+	&--cart {
+		h1 {
+			margin-bottom: rem(7);
+		}
+	}
+}

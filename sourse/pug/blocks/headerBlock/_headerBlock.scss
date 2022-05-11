@@ -27,12 +27,13 @@
 	&__col {
 		margin-right: auto;
 		@include media-breakpoint-up(lg) {
-			min-width: rem(700);
+			// min-width: rem(700);
 		}
 	}
 	&__wrap {
 		display: flex;
 		margin-top: 17px;
+		justify-content: flex-end;
 		@include media-breakpoint-down(sm) {
 			flex-direction: column;
 			align-items: flex-start;
@@ -60,19 +61,26 @@
 			font-size: rem(18);
 		}
 	}
-	// &__slider {
-	// 	margin-bottom: rem(38.600);
-	// }
+	&__slider {
+		@include media-breakpoint-up(md) {
+			padding: 30px;
+			margin: -30px;
+		}
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
+	}
 	&__item {
+		max-width: rem(448);
 		border-radius: 40px;
 		padding: rem(44) rem(38) rem(39);
 		min-height: rem(296);
 		position: relative;
-		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		color: $white;
 		box-shadow: 0px 26px 44px #170704;
+		overflow: hidden;
 		img {
 			position: absolute;
 			top: 0;
@@ -95,9 +103,9 @@
 
 	&__swiper-wrap {
 		margin-bottom: rem(38.600);
-		padding: 30px;
-    margin-left: -30px;
-    margin-top: -30px;
+		// padding: 30px;
+    // margin-left: -30px;
+    // margin-top: -30px;
 	}
 
 	&__more {

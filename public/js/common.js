@@ -364,17 +364,17 @@ function eventHandler() {
 	// modal window
 
 	const headerBlockSwiper = new Swiper('.headerBlock__slider--js', {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		spaceBetween: 32,
 		loop: true,
-		breakpoints: {
-			575: {
-				slidesPerView: 2,
-			},
-			992: {
-				slidesPerView: 3,
-			}
-		},
+		// breakpoints: {
+		// 	575: {
+		// 		slidesPerView: 2,
+		// 	},
+		// 	992: {
+		// 		slidesPerView: 3,
+		// 	}
+		// },
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -437,6 +437,15 @@ const sClubSwiper2 = new Swiper('.sClub__slider--js', {
 
 const tabsSwiper = new Swiper('.tabs', {
 	slidesPerView: 'auto',
+});
+
+$('.order-overview').hcSticky({
+	stickTo: $('.hc-container'),
+	responsive: {
+		992: {
+			disable: true
+		}
+	}
 });
 
 if (document.readyState !== 'loading') {

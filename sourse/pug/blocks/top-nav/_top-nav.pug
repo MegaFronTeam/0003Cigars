@@ -29,13 +29,18 @@ mixin top-nav()
 	+b.top-nav
 		.container
 			+e.row-main.row
-				+e.col.col.d-xl-none
-					+menu-toggle()
 				.col-auto
 					+logo()
 				.col-auto.d-none.d-xl-flex
 					+addr()
-				//- .col-auto
+				+e.col-soc.col-auto.d-none.d-xl-block
+					+soc()
+						+item-sos()
+							+icon('instagram')
+						+item-sos()
+							+icon('telegram')
+						+item-sos()
+							+icon('fb')
 				.col
 					+e.row.row
 						.col-auto.d-none.d-xl-block
@@ -72,5 +77,7 @@ mixin top-nav()
 						img(src="img/svg/basket.svg", alt="")
 						span.d-none.d-md-inline Корзина
 						+e.count 99
+				+e.col.col-auto.d-xl-none
+					+menu-toggle()
 				
 	// end top-nav

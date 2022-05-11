@@ -12,10 +12,13 @@
 		}
 		p {
 			line-height: 1.70em;
-			margin-bottom: rem(55.800);
+			margin-bottom: rem(20);
 		}
 		picture {
-			text-align: right;
+			margin-bottom: rem(49);
+			@include media-breakpoint-up(lg) {
+				text-align: right;
+			}
 		}
 		&--indent {
 			p {
