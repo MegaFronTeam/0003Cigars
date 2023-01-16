@@ -171,7 +171,8 @@ $enable-important-utilities: true !default;
 
 // Prefix for :root CSS variables
 
-$variable-prefix: bs- !default;
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
 
 // Gradient
 //
