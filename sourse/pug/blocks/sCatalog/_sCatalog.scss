@@ -326,10 +326,15 @@
 		.custom-input {
 			margin-top: var(--bs-gutter-y);
 			margin-bottom: 0;
+			padding-left: 0;
+			display: flex;
+			align-items: center;
 			&__input {
 				width: rem(20);
 				height: rem(20);
-				margin-top: rem(5.5);
+				margin-top: 0;
+				margin-left: 0;
+				margin-right: rem(5);
 			}
 			&__text {
 				font-size: rem(16);
