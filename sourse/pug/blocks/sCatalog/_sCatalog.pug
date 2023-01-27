@@ -25,6 +25,19 @@ mixin catalogItem(img, duration, strength, price)
 				+icon('cart')
 
 
+mixin filterDropdown(btn, isSelected)
+	+b.filter-dropdown--js&attributes(attributes)
+		+e.btn(class=(isSelected ? '--selected' : ''))
+			!= btn
+			+icon('chevron-down')
+			if isSelected
+				+e.info 
+					| 5
+					+e.cross
+		+e.dropdown-item
+			block
+
+
 mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
@@ -55,11 +68,27 @@ mixin sCatalog(data)
 					+e.title Фильтр:
 					+e.form
 						+e.select-wrap
-							select.form-select(aria-label="Выберете страну")
-								option(selected) Страна
-								option(value="Другая страна1") Cтрана1
-								option(value="Другая страна2") Cтрана2
-								option(value="Другая страна3") Cтрана3
+							+filterDropdown('Страна', true)
+								+input('Начните вводить', 'text', '')
+								+e.custom-input-wrap
+									-for(let i = 0; i < 5; i++)
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Россия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+								+e.reset-btn.btn.btn-dark2(href='#') 
+									span Сбросить
+									+e.count 5
+							//- select.form-select(aria-label="Выберете страну")
+							//- 	option(selected) Страна
+							//- 	option(value="Другая страна1") Cтрана1
+							//- 	option(value="Другая страна2") Cтрана2
+							//- 	option(value="Другая страна3") Cтрана3
 						+e.select-wrap
 							select.form-select(aria-label="Выберете крупость")
 								option(selected) Бренд
@@ -79,10 +108,23 @@ mixin sCatalog(data)
 								option(value="Время2") Время2
 								option(value="Время3") Время3
 						+e.select-wrap
-							select.form-select(aria-label="Выберете цену")
-								option(selected) Цена
-								option(value="от одной до другой") Цена1
-								option(value="от другой до другой") Цена2
+							+filterDropdown('Цена').--right
+								.range-slider
+									input.js-range-slider(type='text' value='')
+								.extra-controls
+									label
+										span.status От
+										input.js-input-from(type='text' value='0')
+										span.ruble ₽
+									label
+										span.status До
+										input.js-input-to(type='text' value='0')
+										span.ruble ₽
+								+e.reset-btn.btn.btn-dark2(href='#'): span Сбросить
+						//- 	select.form-select(aria-label="Выберете цену")
+						//- 		option(selected) Цена
+						//- 		option(value="от одной до другой") Цена1
+						//- 		option(value="от другой до другой") Цена2
 						+e.select-wrap
 							select.form-select(aria-label="Поштучно")
 								option(value="от одной до другой") Поштучно

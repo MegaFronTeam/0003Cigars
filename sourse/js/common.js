@@ -450,6 +450,81 @@ function eventHandler() {
 		});
 	};
 
+	var $range = $(".js-range-slider");
+	var $inputFrom = $(".js-input-from");
+	var $inputTo = $(".js-input-to");
+	var instance;
+	var min = 0;
+	var max = 156668;
+	var from = 0;
+	var to = 0;
+
+	$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			min: min,
+			max: max,
+			from: 890,
+			to: 18090,
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+	});
+	instance = $range.data("ionRangeSlider");
+
+	function updateInputs (data) {
+			from = data.from;
+			to = data.to;
+
+			$inputFrom.prop("value", from);
+			$inputTo.prop("value", to);
+	}
+
+	$inputFrom.on("change", function () {
+		var val = $(this).prop("value");
+		console.log(val);
+		// validate
+		if (val < min) {
+			val = min;
+		} else if (val > to) {
+			val = to;
+		}
+		instance.update({
+			from: val
+		});
+		$(this).prop("value", val);
+	});
+
+	$inputTo.on("change", function () {
+		var val = $(this).prop("value");
+		// validate
+		if (val < from) {
+				val = from;
+		} else if (val > max) {
+				val = max;
+		}
+		instance.update({
+				to: val
+		});
+		$(this).prop("value", val);
+	});
+
+	let filterDropdowns = document.querySelectorAll('.filter-dropdown--js');
+	if(filterDropdowns) {
+		for (let filterDropdown of filterDropdowns) {
+			let filterDropdownBtn = filterDropdown.querySelector('.filter-dropdown__btn');
+			filterDropdownBtn.addEventListener('click', function() {
+				filterDropdown.querySelector('.filter-dropdown__dropdown-item').classList.toggle('active');
+			})
+			document.addEventListener('mouseup', (event) => {
+				let filtefilterDropdownTarget = event.target.closest('.filter-dropdown__dropdown-item');
+				if(!filtefilterDropdownTarget) {
+					filterDropdown.querySelector('.filter-dropdown__dropdown-item').classList.remove('active');
+				}
+			});
+		}
+	}
+
 };
 
 

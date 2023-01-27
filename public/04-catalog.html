@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&amp;display=swap" rel="stylesheet"/>
@@ -221,12 +222,119 @@
 							</div>
 							<div class="display-wrap__form">
 								<div class="display-wrap__select-wrap">
-									<select class="form-select" aria-label="Выберете страну">
-										<option selected="selected">Страна</option>
-										<option value="Другая страна1">Cтрана1</option>
-										<option value="Другая страна2">Cтрана2</option>
-										<option value="Другая страна3">Cтрана3</option>
-									</select>
+									<div class="filter-dropdown filter-dropdown--js">
+										<div class="filter-dropdown__btn filter-dropdown__btn--selected">Страна
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+											<div class="filter-dropdown__info">
+												 5
+												<div class="filter-dropdown__cross">
+												</div>
+											</div>
+										</div>
+										<div class="filter-dropdown__dropdown-item">
+											<div class="filter-dropdown__input-wrap form-group"><input class="filter-dropdown__input form-control" name="text" type="text" placeholder="Начните вводить"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="filter-dropdown__custom-input-wrap">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Россия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Россия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Россия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Россия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Еще страна</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Россия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Куба</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Малайзия</span>
+												</label>
+											</div>
+											<a class="filter-dropdown__reset-btn btn btn-dark2" href="#"> <span>Сбросить</span>
+												<div class="filter-dropdown__count">5
+												</div>
+											</a>
+										</div>
+									</div>
 								</div>
 								<div class="display-wrap__select-wrap">
 									<select class="form-select" aria-label="Выберете крупость">
@@ -253,11 +361,28 @@
 									</select>
 								</div>
 								<div class="display-wrap__select-wrap">
-									<select class="form-select" aria-label="Выберете цену">
-										<option selected="selected">Цена</option>
-										<option value="от одной до другой">Цена1</option>
-										<option value="от другой до другой">Цена2</option>
-									</select>
+									<div class="filter-dropdown filter-dropdown--js filter-dropdown--right">
+										<div class="filter-dropdown__btn">Цена
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
+										<div class="filter-dropdown__dropdown-item">
+											<div class="range-slider">
+												<input class="js-range-slider" type="text" value=""/>
+											</div>
+											<div class="extra-controls">
+												<label><span class="status">От</span>
+													<input class="js-input-from" type="text" value="0"/><span class="ruble">₽</span>
+												</label>
+												<label><span class="status">До</span>
+													<input class="js-input-to" type="text" value="0"/><span class="ruble">₽</span>
+												</label>
+											</div>
+											<a class="filter-dropdown__reset-btn btn btn-dark2" href="#"><span>Сбросить</span>
+											</a>
+										</div>
+									</div>
 								</div>
 								<div class="display-wrap__select-wrap">
 									<select class="form-select" aria-label="Поштучно">
@@ -725,6 +850,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js?v=0.0.1"></script>
 	</body>
 </html>

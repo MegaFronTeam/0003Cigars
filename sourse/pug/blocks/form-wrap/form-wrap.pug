@@ -29,7 +29,8 @@ mixin input(placeholder,  t='text', label= placeholder, name= t)
 				block
 		else
 			+t(t,placeholder, name)&attributes(attributes)
-			+e.SPAN.input-title= label
+			if label
+				+e.SPAN.input-title= label
 		block
 	// +e.input-wrap
 mixin select(label,pl,...items)
