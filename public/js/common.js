@@ -515,10 +515,13 @@ function eventHandler() {
 			let filterDropdownBtn = filterDropdown.querySelector('.filter-dropdown__btn');
 			filterDropdownBtn.addEventListener('click', function() {
 				filterDropdown.querySelector('.filter-dropdown__dropdown-item').classList.toggle('active');
+				filterDropdown.classList.toggle('active');
 			})
 			document.addEventListener('mouseup', (event) => {
-				let filtefilterDropdownTarget = event.target.closest('.filter-dropdown__dropdown-item');
-				if(!filtefilterDropdownTarget) {
+				let filterDropdownContainerTarget = event.target.closest('.filter-dropdown.active');
+				let filterDropdownBtnTarget = event.target.closest('.filter-dropdown__btn.active');
+				if(!filterDropdownContainerTarget && !filterDropdownBtnTarget) {
+					filterDropdown.classList.remove('active');
 					filterDropdown.querySelector('.filter-dropdown__dropdown-item').classList.remove('active');
 				}
 			});

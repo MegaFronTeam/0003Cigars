@@ -44,10 +44,18 @@
 .display-wrap {
 	justify-content: space-between;
 	margin-bottom: 50px;
+	@include media-breakpoint-down(xl) {
+		position: relative;
+	}
 	&__filter,
 	&__sorter {
 		display: flex;
 		flex-wrap: wrap;
+	}
+	&__filter {
+		@include media-breakpoint-down(xl) {
+			margin-bottom: rem(20);
+		}
 	}
 	&__sorter {
 		@include media-breakpoint-up(xl) {
@@ -55,8 +63,13 @@
 		}
 	}
 	&__form {
+		--bs-gutter-y: #{rem(15)};
 		display: flex;
 		flex-wrap: wrap;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
 	}
 	&__title {
 		font-size: rem(16);
@@ -197,7 +210,9 @@
 }
 
 .filter-dropdown {
-	position: relative;
+	@include media-breakpoint-up(xl) {
+		position: relative;
+	}
 	&__btn {
 		cursor: pointer;
 		border: 1px solid transparent;
@@ -227,7 +242,7 @@
 	&__info  {
 		background-color: $dark;
 		border-radius: 7px;
-		padding: 0 rem(7) 0 rem(7);
+		padding: 0 rem(8.800) 0 rem(8.800);
 		margin-left: rem(10);
 		display: flex;
 		align-items: center;
@@ -236,9 +251,9 @@
 		flex: 0 0 auto;
 		cursor: pointer;
 		position: relative;
-		width: rem(12);
-		height: rem(12);
-		margin-left: rem(10);
+		width: rem(17);
+		height: rem(17);
+		margin-left: rem(8.2);
 		&:hover {
 			&::before, &:after {
 				background-color: $primary;
@@ -250,7 +265,7 @@
 			position: absolute;
 			display: block;
 			width: 100%;
-			height: 2px;
+			height: 1px;
 			background-color: #fff;
 			@include a-cent();
 		}
@@ -276,6 +291,10 @@
 		&.active {
 			opacity: 1;
 			pointer-events: all;
+		}
+		@include media-breakpoint-down(xl) {
+			width: calc(100% - var(--bs-gutter-x));
+			left: calc(var(--bs-gutter-x) /2);
 		}
 	}
 	&__input-wrap {
@@ -348,6 +367,7 @@
     width: rem(25);
 		font-family: var(--bs-btn-font-family);
 		margin-left: rem(19);
+		line-height: 1rem;
 	}
 	.irs {
 		&-from, &-to, &-single {
@@ -445,10 +465,6 @@
 		.filter-dropdown__dropdown-item {
 			right: 0;
 			left: unset;
-			@include media-breakpoint-up(xxl) {
-				left: 0;
-				right: unset;
-			}
 		}
 	}
 }

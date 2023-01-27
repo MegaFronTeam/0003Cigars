@@ -42,27 +42,27 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
-			.category-wrap
-				+e.select-wrap
-					select.form-select(aria-label="Выберете cигары").form-select--active
-							option(selected) Сигары
-							option(value="Сигары 1") Сигары 1
-							option(value="Сигары 2") Сигары 2
-				+e.select-wrap
-					select.form-select(aria-label="Выберете Сигариллы")
-							option(selected) Сигариллы
-							option(value="Сигариллы 1") Сигариллы 1
-							option(value="Сигариллы 2") Сигариллы 2
-				+e.select-wrap
-					select.form-select(aria-label="Выберете Аксессуары")
-						option(selected) Аксессуары
-						option(value="Аксессуары 1") Аксессуары1
-						option(value="Аксессуары 2") Аксессуары 2
-				+e.select-wrap
-					select.form-select(aria-label="Выберете Наборы")
-						option(selected) Наборы
-						option(value="Наборы 1") Наборы 1
-						option(value="Наборы 2") Наборы 2
+			//- .category-wrap
+			//- 	+e.select-wrap
+			//- 		select.form-select(aria-label="Выберете cигары").form-select--active
+			//- 				option(selected) Сигары
+			//- 				option(value="Сигары 1") Сигары 1
+			//- 				option(value="Сигары 2") Сигары 2
+			//- 	+e.select-wrap
+			//- 		select.form-select(aria-label="Выберете Сигариллы")
+			//- 				option(selected) Сигариллы
+			//- 				option(value="Сигариллы 1") Сигариллы 1
+			//- 				option(value="Сигариллы 2") Сигариллы 2
+			//- 	+e.select-wrap
+			//- 		select.form-select(aria-label="Выберете Аксессуары")
+			//- 			option(selected) Аксессуары
+			//- 			option(value="Аксессуары 1") Аксессуары1
+			//- 			option(value="Аксессуары 2") Аксессуары 2
+			//- 	+e.select-wrap
+			//- 		select.form-select(aria-label="Выберете Наборы")
+			//- 			option(selected) Наборы
+			//- 			option(value="Наборы 1") Наборы 1
+			//- 			option(value="Наборы 2") Наборы 2
 			+b.display-wrap.row
 				+e.filter.col-xl-9
 					+e.title Фильтр:
@@ -90,25 +90,58 @@ mixin sCatalog(data)
 							//- 	option(value="Другая страна2") Cтрана2
 							//- 	option(value="Другая страна3") Cтрана3
 						+e.select-wrap
-							select.form-select(aria-label="Выберете крупость")
-								option(selected) Бренд
-								option(value="Другой бренд2") Бренд2
-								option(value="Другой бренд3") Бренд3
-								option(value="Другой бренд3") Бренд3
+							+filterDropdown('Бренд')
+								+input('Начните вводить', 'text', '')
+								+e.custom-input-wrap
+									-for(let i = 0; i < 5; i++)
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Россия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+								+e.reset-btn.btn.btn-dark2(href='#') 
+									span Сбросить
+									+e.count 5
 						+e.select-wrap
-							select.form-select(aria-label="Выберете крепость")
-								option(selected) Крепость
-								option(value="Крепость1") Крепость1
-								option(value="Крепость2") Крепость2
-								option(value="Крепость3") Крепость3
+							+filterDropdown('Крепость')
+								+input('Начните вводить', 'text', '')
+								+e.custom-input-wrap
+									-for(let i = 0; i < 5; i++)
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Россия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+								+e.reset-btn.btn.btn-dark2(href='#') 
+									span Сбросить
+									+e.count 5
 						+e.select-wrap
-							select.form-select(aria-label="Выберете время курения").form-select--selected
-								option(selected) Время курения: Выбрано 3
-								option(value="Время1") Время1
-								option(value="Время2") Время2
-								option(value="Время3") Время3
+							+filterDropdown('Время курения:', true)
+								+input('Начните вводить', 'text', '')
+								+e.custom-input-wrap
+									-for(let i = 0; i < 5; i++)
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Россия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+								+e.reset-btn.btn.btn-dark2(href='#') 
+									span Сбросить
+									+e.count 5
 						+e.select-wrap
-							+filterDropdown('Цена').--right
+							+filterDropdown('Цена')
 								.range-slider
 									input.js-range-slider(type='text' value='')
 								.extra-controls
@@ -121,20 +154,46 @@ mixin sCatalog(data)
 										input.js-input-to(type='text' value='0')
 										span.ruble ₽
 								+e.reset-btn.btn.btn-dark2(href='#'): span Сбросить
+						+e.select-wrap
+							+filterDropdown('Поштучно')
+								+input('Начните вводить', 'text', '')
+								+e.custom-input-wrap
+									-for(let i = 0; i < 5; i++)
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Страна')
+										+in-c('checkbox', 'Еще страна')
+										+in-c('checkbox', 'Россия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+										+in-c('checkbox', 'Куба')
+										+in-c('checkbox', 'Малайзия')
+								+e.reset-btn.btn.btn-dark2(href='#') 
+									span Сбросить
+									+e.count 5
 						//- 	select.form-select(aria-label="Выберете цену")
 						//- 		option(selected) Цена
 						//- 		option(value="от одной до другой") Цена1
 						//- 		option(value="от другой до другой") Цена2
-						+e.select-wrap
-							select.form-select(aria-label="Поштучно")
-								option(value="от одной до другой") Поштучно
-								option(value="от другой до другой") За упаковку
 				+e.sorter.col-xl-3
 					+e.title Сортировать:
 					+e.select-wrap
-						select.form-select(aria-label="Сортировать")
-							option(selected) Сначала дорогие
-							option(value="Сначала недорогие") Сначала недорогие
+						+filterDropdown('Страна').--right
+							+input('Начните вводить', 'text', '')
+							+e.custom-input-wrap
+								-for(let i = 0; i < 5; i++)
+									+in-c('checkbox', 'Страна')
+									+in-c('checkbox', 'Еще страна')
+									+in-c('checkbox', 'Страна')
+									+in-c('checkbox', 'Еще страна')
+									+in-c('checkbox', 'Россия')
+									+in-c('checkbox', 'Куба')
+									+in-c('checkbox', 'Малайзия')
+									+in-c('checkbox', 'Куба')
+									+in-c('checkbox', 'Малайзия')
+							+e.reset-btn.btn.btn-dark2(href='#') 
+								span Сбросить
+								+e.count 5
 					
 			+e.row-main.row
 				.col-md-6.col-lg-4
