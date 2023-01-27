@@ -1,6 +1,7 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	padding-top: rem(19);
+	position: relative;
 	address{
 		margin: 0 rem(24) 0 0;
 		p
@@ -197,3 +198,137 @@
 }
 
 
+.catalog-dropdown {
+	@include mt;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	left: 0;
+	background-color: #452F2B;
+	padding: rem(40) 0 rem(67);
+	z-index: 1000;
+	@include media-breakpoint-down(xl) {
+		position: fixed;
+		top: 0;
+		height: calc(var(--vh) * 100);
+		padding: rem(60) 0 rem(67);
+		transform: translateX(-100%);
+	}
+	@include media-breakpoint-up(xl) {
+		pointer-events: none;
+		opacity: 0;
+	}
+	&.active {
+		@include media-breakpoint-down(xl) {
+			transform: translateX(0);
+		}
+		@include media-breakpoint-up(xl) {
+			pointer-events: all;
+			opacity: 1;
+		}
+	}
+	.container {
+		&:after {
+			content: unset;
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(30.5)};
+		--bs-gutter-y: #{rem(30)};
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(81);
+		}
+	}
+	&__title-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		.catalog-dropdown__title {
+			margin-bottom: rem(26);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__title {
+		line-height: 0.989em;
+		margin-bottom: rem(18);
+		font-family: var(--bs-font-monospace);
+		color: #fff;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(36);
+		}
+	}
+	&__columns {
+		columns: 2;
+		@include media-breakpoint-up(sm) {
+			columns: 3;
+		}
+	}
+	ul {
+		--bs-gutter-y: #{rem(5)};
+
+		list-style-type: none;
+		margin-bottom: 0;
+		margin-top: calc(var(--bs-gutter-y) * -1);
+		max-width: rem(657);
+		li {
+			display: inline-block;
+			width: 100%;
+			margin-top: var(--bs-gutter-y);
+			a {
+				position: relative;
+				color: #fff;
+				font-size: rem(16);
+				line-height: 1.5em;
+				&:after {
+					@include mt;
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 1px;
+					left: 0;
+					bottom: 0;
+					background-color: transparent;
+				}
+				&:hover {
+					&:after {
+						background-color: #fff;
+					}
+				}
+				&.catalog-dropdown__show-full {
+					color: $orange;
+					&:hover {
+						&:after {
+							background-color: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__back {
+		@include mt;
+		position: absolute;
+		top: 12px;
+		left: 10px;
+		cursor: pointer;
+		display: block;
+		z-index: 2;
+		&:hover {
+			color: $primary;
+		}
+		.icon {
+			font-size: rem(36);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+		}
+		@include media-breakpoint-up(xl) {
+			display: none;
+		}
+	}
+}

@@ -3,7 +3,7 @@
 		{ "name":"Новости", "url":"#", "active":"active"},
 		{	"name":"Бренды", "url":"#"},
 		{"name":"Бутик", "url":"#"},
-		{"name":"Каталог", "url":"#"} ,
+		{"name":"Каталог", "url":"#", "itemClass":"menu-item-catalog--js"} ,
 		{"name":"Партнеры", "url":"#"} ,
 		{"name":"Обучение", "url":"#"} ,
 		{"name":"Клуб", "url":"#"} ,

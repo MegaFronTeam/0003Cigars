@@ -24,6 +24,48 @@ mixin mob-mnu()
 				+item-sos('')
 					+icon('fb')
 	//  мобильное меню
+
+mixin catalog()
+	+b.catalog-dropdown
+		+e.back: +icon('chevron-left')
+		.container
+			+e.row.row
+				.col-lg-9
+					+e.title.h3 Сигары
+					+e.UL.columns
+						li: a(href="#") Cohiba
+						li: a(href="#") Hoyo De Monterrey
+						li: a(href="#") Partagas
+						li: a(href="#") Romeo y Julietta
+						li: a(href="#") Quintero
+						li: a(href="#") H.Upmann
+						li: a(href="#") Montecristo
+						li: a(href="#") Cohiba
+						li: a(href="#") Hoyo De Monterrey
+						li: a(href="#") Partagas
+						li: a(href="#") Romeo y Julietta
+						li: a(href="#") Quintero
+						li: a(href="#") H.Upmann
+						li: a(href="#") Montecristo
+						li: a(href="#") Cohiba
+						li: a(href="#") Hoyo De Monterrey
+						li: a(href="#") Partagas
+						li: a(href="#") Romeo y Julietta
+						li: a(href="#") Quintero
+						li: a.catalog-dropdown__show-full(href="#") Смотреть все
+				.col-lg-3
+					+e.title.h3 Сигариллы
+					ul
+						li: a(href="#") Cohiba
+						li: a(href="#") Hoyo De Monterrey
+						li: a(href="#") Partagas
+						li: a(href="#") Romeo y Julietta
+						li: a(href="#") Quintero
+						li: a(href="#") H.Upmann
+						li: a(href="#") Montecristo
+			+e.title-wrap
+				+e.title.h3(href='#') Аксессуары
+				+e.title.h3(href='#') Наборы
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav
@@ -79,5 +121,5 @@ mixin top-nav()
 						+e.count 99
 				+e.col.col-auto.d-xl-none
 					+menu-toggle()
-				
+		+catalog()
 	// end top-nav

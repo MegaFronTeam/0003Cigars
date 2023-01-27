@@ -85,7 +85,8 @@ const JSCCommon = {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
 			let link = event.target.closest(".menu-mobile .menu a"); // (1)
 			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
+			let catalogTargetContainer = event.target.closest('.catalog-dropdown.active'); // (1)
+			if (!container && !toggle && !catalogTargetContainer) this.closeMenu();
 		}, { passive: true });
 
 		window.addEventListener('resize', () => {
@@ -427,6 +428,28 @@ function eventHandler() {
 	// 	});
 	// };
 	// convertImages(".sBrandsSlider__item img");
+
+	let catalogBtn = document.querySelector('.menu-item-catalog--js a');
+	let catalogDropdown = document.querySelector('.catalog-dropdown');
+	if (catalogBtn) {
+		catalogBtn.addEventListener('click', function(event) {
+			event.preventDefault();
+			this.classList.toggle('active');
+			if (catalogDropdown) {
+				catalogDropdown.classList.toggle('active');
+				document.addEventListener('mouseup', (event) => {
+					let catalogContainer = event.target.closest('.catalog-dropdown.active');
+					let catalogTargetBtn = event.target.closest('.menu-item-catalog--js a.active');
+					let catalogTargetBackBtn = event.target.closest('.catalog-dropdown__back');
+					if(!catalogContainer && !catalogTargetBtn || catalogTargetBackBtn) {
+						catalogBtn.classList.remove('active');
+						catalogDropdown.classList.remove('active');
+					}
+				});
+			};
+		});
+	};
+
 };
 
 
